@@ -1,0 +1,1 @@
+function advantages5Init() {}

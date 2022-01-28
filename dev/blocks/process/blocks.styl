@@ -1,0 +1,87 @@
+.process__container
+	display flex
+	flex-direction column
+
+.process__heading
+	order -3
+
+.process__desc
+	order -2
+	margin-bottom 24px
+	@media(min-width desktop)
+		margin-bottom 40px
+
+.process__list
+	margin 0
+	padding 0
+	list-style none
+	counter-reset processList
+	@media(min-width desktop)
+		display flex
+		flex-wrap wrap
+		gap 20px
+
+.process__item
+	counter-increment processList
+	padding 12px 16px 20px
+	background #F3F3F3
+	@media(min-width desktop)
+		width calc((100% - 40px) / 3)
+		padding 12px 36px 24px 20px
+
+	&::before
+		display block
+		content counter(processList)
+		margin-bottom 48px
+		@media(min-width desktop)
+			margin-bottom 92px
+
+	& + &
+		margin-top 20px
+		@media(min-width desktop)
+			margin-top 0
+
+	@media(min-width desktop)
+		&:last-child:not(:nth-child(3n))
+			flex-grow 1
+
+.process__step
+	margin 0
+	color #000
+	max-width 565px
+
+.process__stepBtn
+	color #000
+	padding 0
+	border none
+	background none
+
+.process__stepDesc
+	color #000
+	margin-top 6px
+	max-width 330px
+	@media(min-width desktop)
+		margin-top 12px
+
+	p
+		margin 0
+		color #000
+
+.process__link
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 25px
+	display table
+	transition 0.3s
+	order -1
+	align-self start
+	margin-bottom 40px
+
+	@media(min-width desktop)
+		margin-bottom 100px
+
+	&:hover
+		background mainText
+		color main

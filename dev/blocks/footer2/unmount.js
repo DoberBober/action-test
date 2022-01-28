@@ -1,0 +1,1 @@
+function footer2Unmount() {}

@@ -1,0 +1,48 @@
+-
+	 var title = "Новости"
+-
+	 var news = [
+				{
+					'date': '23 января 2021',
+					'title': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА'
+				},
+				{
+					'date': '23 января 2021',
+					'title': 'Диплом Всероссийской'
+				},
+				{
+					'date': '23 января 2021',
+					'title': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА очень длинный заголовок'
+				},
+				{
+					'date': '23 января 2021',
+					'title': 'Диплом Всероссийской'
+				},
+
+			]
+-
+	 var text = [
+				'Skillbox — это онлайн-университет. У нас прикладные курсы и программы от главных экспертов рынка, актуальные подходы к обучению, работа над реальными проектами, стажировки и трудоустройство в крупнейшие компании страны.',
+				'Тестовый второй параграф.'
+			]
+
+- var className = 'section news'
+if extraClass
+	- className = 'section news news--' + extraClass
+
+
+
+section(class=className)#news
+	.container.news__container
+		h2.news__heading.heading !{title}
+		if text
+			.news__desc.text
+				each paragraph in text
+					p= paragraph
+
+		.news__list
+			each item in news
+				.news__item
+					time(datetime="__в_формате_ISO_8601__").news__time !{item['date']}
+					h4.news__name
+						a(href="#") !{item['title']}

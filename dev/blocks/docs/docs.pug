@@ -1,0 +1,81 @@
+-
+	 var title = 'Награды, сертификаты, лицензии, свидетельства'
+-
+	 var desc = [
+				'Skillbox — это онлайн-университет. У нас прикладные курсы и программы от главных экспертов рынка, актуальные подходы к обучению, работа над реальными проектами, стажировки и трудоустройство в крупнейшие компании страны.',
+				'Тестовый параграф'
+			]
+-
+	 var images = [
+				{
+					'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА',
+					'url': 'docs-1.png',
+					'type': 'reward'
+				},
+				{
+					'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА 2',
+					'url': 'docs-2.png',
+					'type': 'certificate'
+				},
+				{
+					'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА 3',
+					'url': 'docs-3.png',
+					'type': 'reward'
+				},
+				{
+					'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА 4',
+					'url': 'docs-1.png',
+					'type': 'certificate'
+				},
+				{
+					'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА 5',
+					'url': 'docs-2.png',
+					'type': 'reward'
+				},
+				{
+					'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА 6',
+					'url': 'docs-3.png',
+					'type': 'certificate'
+				},
+				{
+					'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА 7',
+					'url': 'docs-1.png',
+					'type': 'reward'
+				},
+				{
+					'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА 8',
+					'url': 'docs-2.png',
+					'type': 'certificate'
+				},
+				{
+					'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА 9',
+					'url': 'docs-3.png',
+					'type': 'reward'
+				}
+			]
+
+
+- var className = 'section docs'
+if extraClass
+	- className = 'section docs docs--' + extraClass
+
+
+section(class=className)#docs
+	.container.docs__container
+		h2.docs__heading.heading !{title}
+
+		if desc
+			.docs__desc.text
+				each paragraph in desc
+					p= paragraph
+
+		.docs__btns
+			button(type='button' data-docType='reward').docs__btn Награды
+			button(type='button' data-docType='certificate').docs__btn Сертификаты
+
+		.docs__list
+			each item in images
+				.docs__item.docs__item--slide(data-docType=item['type'])
+					.docs__imgWrapper
+						img(src="./images/" + item['url'], alt=item['name']).docs__img
+					h3.docs__name !{item['name']}

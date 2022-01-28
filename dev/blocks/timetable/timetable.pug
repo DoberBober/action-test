@@ -1,0 +1,87 @@
+- 
+	var title = 'Программа конференции'
+- 
+	var desc = [
+				'Skillbox — это онлайн-университет. У нас прикладные курсы и программы от главных экспертов рынка, актуальные подходы к обучению, работа над реальными проектами, стажировки и трудоустройство в крупнейшие компании страны.',
+				'Тестовый параграф'
+			]
+- 
+	var days = ['14 марта, среда', '15 марта, четверг']
+- 
+	var list = {
+				'14 марта, среда': [
+					{
+						'time': '08:30 – 09:00',
+						'name': 'Регистрация участников',
+						'desc': 'Пожалуйста подключитесь к конференции заранее, чтобы проверить качество связи и корректность работы платформы!',
+					},
+					{
+						'time': '12:30 – 15:00',
+						'name': 'Регистрация участников',
+						'desc': '',
+					},
+					{
+						'time': '15:30 – 18:00',
+						'name': 'Обзор HR-TECH рынка в России, за какими технологиями будущее? Пилоты и внедрение инновационных IT-решений в различных HR-функциях: подбор, адаптация, оценка, L&D, С&B, вовлечённость, PM, Wellbeing и др.',
+						'desc': '',
+					}
+				],
+				'15 марта, четверг': [
+					{
+						'time': '08:30 – 09:00',
+						'name': 'Регистрация участников',
+						'desc': 'Пожалуйста подключитесь к конференции заранее, чтобы проверить качество связи и корректность работы платформы!',
+					},
+					{
+						'time': '08:30 – 09:00',
+						'name': '',
+						'desc': 'Пожалуйста подключитесь к конференции заранее, чтобы проверить качество связи и корректность работы платформы!',
+					},
+					{
+						'time': '15:30 – 18:00',
+						'name': 'Обзор HR-TECH рынка в России, за какими технологиями будущее? Пилоты и внедрение инновационных IT-решений в различных HR-функциях: подбор, адаптация, оценка, L&D, С&B, вовлечённость, PM, Wellbeing и др.',
+						'desc': '',
+					}
+				]
+			}
+
+- var className = 'section timetable'
+if extraClass
+	- className = 'section timetable timetable--' + extraClass	
+
+
+section(class=className)#timetable
+	.container.timetable__container
+		h2.timetable__heading.heading !{title}
+
+		if desc
+			.timetable__desc.text
+				each paragraph in desc
+					p= paragraph
+
+		.timetable__btns
+			each day in days
+				button(type="button" data-day=day).timetable__btn !{day}
+
+		select.timetable__select.hidden
+			each day in days
+				option(value=day) !{day}
+
+		.timetable__dropdown.dropdown.dropdown--timetable
+			span.dropdown__select
+			.dropdown__list
+				each day in days
+					div.dropdown__item(value=day) !{day}
+
+		.timetable__list
+			each item, day in list
+				.timetable__day(data-day=day)
+					h3.timetable__date !{day}
+					.timetable__schedule
+						each evt in item
+							.timetable__event
+								.timetable__time !{evt['time']}
+								if evt['name']
+									h4.timetable__name !{evt['name']}
+								if evt['desc']
+									.timetable__text !{evt['desc']}

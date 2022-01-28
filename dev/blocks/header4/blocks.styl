@@ -1,0 +1,167 @@
+.header4
+	padding-top 24px
+	padding-bottom 24px
+	background header
+	position absolute
+	left 0
+	top 0
+	width 100%
+	border-bottom 1px solid headerText
+
+.header4__container
+	display flex
+	align-items center
+
+.header4__logo,
+.mainMenu4__logo
+	color headerText
+	text-decoration none
+
+	img
+		display block
+		object-fit contain
+		object-position left center
+		width 135px
+		height 24px
+
+		@media(min-width desktop)
+			width 180px
+			height 32px
+
+.mainMenu4__logo
+	color black
+
+.mainMenu4__header
+	display flex
+	justify-content space-between
+	align-items center
+
+.header4__menuChecker
+	width 18px
+	height 10px
+	border none
+	padding 0
+	background none
+	position relative
+
+	&::before, &::after
+		content ''
+		position absolute
+		left 0
+		width 100%
+		height 2px
+
+	&--open
+		margin-left auto
+
+		&::before, &::after
+			background headerText
+
+		&::before
+			top 0
+
+		&::after
+			bottom 0
+
+
+	&--close
+		&::before, &::after
+			background black
+
+		&::before
+			transform rotate(45deg)
+
+		&::after
+			transform rotate(-45deg)
+
+.mainMenu4__list
+	margin 0
+	padding 0
+	list-style none
+
+	@media(max-width upToDesktop)
+		margin-top auto
+		overflow-y auto
+		-ms-overflow-style none
+		scrollbar-width none
+
+		&::-webkit-scrollbar
+			display none
+
+	@media(min-width desktop)
+		display flex
+		flex-wrap wrap
+
+.mainMenu4__item
+	@media(max-width upToDesktop)
+		margin-top 20px
+
+		&:first-child
+			margin-top 0
+
+		&:last-child
+			margin-bottom 48px
+
+	@media(min-width tablet) and (max-width upToDesktop)
+		&:last-child
+			margin-bottom 64px
+
+	@media(min-width desktop)
+		margin-left 24px
+
+
+.mainMenu4__link
+	color headerText
+	text-decoration none
+
+	@media(max-width upToDesktop)
+		color black
+
+.mainMenu4
+	flex-shrink 0
+
+	@media(max-width upToDesktop)
+		display none
+
+		&--active
+			z-index 1
+			background white
+			display flex
+			flex-direction column
+			position fixed
+			left 0
+			top 0
+			width 100%
+			height var(--app-height, 100vh)
+			padding 20px 24px 0
+
+			@media(min-width tablet)
+				padding-top 28px
+
+	@media(min-width desktop)
+		margin-left auto
+		display flex
+
+.mainMenu4__header
+	padding-bottom 24px
+	background white
+
+.mainMenu4__phone
+	text-decoration none
+	display table
+	flex-shrink 0
+
+	@media(max-width upToDesktop)
+		color black
+		padding-top 20px
+		margin-bottom 20px
+		border-top 1px solid currentColor
+
+	@media(min-width tablet) and (max-width upToDesktop)
+		padding-top 28px
+		margin-bottom 32px
+
+	@media(min-width desktop)
+		color headerText
+		margin-left 40px
+		max-width 150px

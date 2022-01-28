@@ -1,0 +1,36 @@
+- var logo = false
+- var sticky = false
+- var animated = true
+- var headerClassNames = 'header3'
+
+if sticky
+	- headerClassNames = headerClassNames + ' headerSticky'
+
+if animated
+	- headerClassNames = headerClassNames + ' headerAnimate'
+
+section(class=headerClassNames)#header3
+	.container.header3__container
+		if logo
+			a(href="#").header3__logo
+				img(src="https://via.placeholder.com/500x500", alt="Название компании")
+		else
+			a(href="#").header3__logo Рога и Копыта
+
+		nav.header3__nav.mainMenu3
+			.mainMenu3__header.onlyMobile
+				if logo
+					a(href="#").mainMenu3__logo
+						img(src="https://via.placeholder.com/500x500", alt="Название компании")
+						img(src="" + logo, alt="Название компании").hidden
+				else
+					a(href="#").mainMenu3__logo Рога и Копыта
+
+				button(type="button" aria-label="Закрыть меню").header3__menuChecker.header3__menuChecker--close
+					.header3__menuCheckerLine
+
+			a(href="#").mainMenu3__btn Read more
+
+
+		button(type="button" aria-label="Открыть меню").header3__menuChecker.header3__menuChecker--open.onlyMobile
+			.header3__menuCheckerLine

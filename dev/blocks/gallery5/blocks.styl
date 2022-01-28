@@ -1,0 +1,65 @@
+.gallery5__images
+	margin 0
+	padding 0
+	list-style none
+
+.gallery5__image
+	width 312px
+	margin-left 12px
+
+	@media(min-width tablet)
+		width 419px
+		margin-left 16px
+
+	@media(min-width desktop)
+		width 793px
+		margin-left 20px
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		align-items baseline
+
+	&:only-of-type
+		width 100%
+
+		@media(min-width desktop)
+			.gallery5__photo, .gallery5__video
+				height 750px
+
+.gallery5__photo, .gallery5__video
+	display block
+	object-fit cover
+	margin 0 0 16px
+	width 100%
+	height 194px
+
+	@media(min-width tablet)
+		height 419px
+
+	@media(min-width desktop)
+		margin-bottom 20px
+		height 496px
+
+.gallery5__name, .gallery5__post
+	display block
+	max-width 443px
+	opacity 0
+	transition opacity 0.3s
+
+	@media(min-width desktop)
+		max-width 312px
+
+.gallery5__name
+	margin 0 0 8px
+
+	@media(min-width desktop)
+		margin-bottom 0
+		width 312px
+
+.gallery5__post
+	@media(min-width desktop)
+		width 273px
+
+.gallery5__image.is-selected
+	.gallery5__name, .gallery5__post
+		opacity 1

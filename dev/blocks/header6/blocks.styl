@@ -1,0 +1,201 @@
+.header6
+	padding-top 25px
+	padding-bottom 26px
+	background header
+	position absolute
+	left 0
+	top 0
+	width 100%
+	border-bottom 1px solid headerText
+
+	@media(min-width tablet)
+		padding-top 24px
+		padding-bottom 24px
+
+.header6__container
+	display flex
+	align-items center
+
+.header6__logo,
+.mainMenu6__logo
+	color headerText
+	text-decoration none
+
+	img
+		display block
+		object-fit contain
+		object-position left center
+		width 135px
+		height 24px
+
+		@media(min-width desktop)
+			width 180px
+			height 32px
+
+.mainMenu6__logo
+	color black
+
+.mainMenu6__header
+	display flex
+	justify-content space-between
+	align-items center
+
+.header6__menuChecker
+	width 18px
+	height 10px
+	border none
+	padding 0
+	background none
+	position relative
+
+	&::before, &::after
+		content ''
+		position absolute
+		left 0
+		width 100%
+		height 2px
+
+	&--open
+		margin-left auto
+		@media(min-width desktop)
+			margin-left 0
+
+		&::before, &::after
+			background headerText
+
+		&::before
+			top 0
+
+		&::after
+			bottom 0
+
+
+	&--close
+		@media(min-width desktop)
+			margin-top -4px
+
+		&::before, &::after
+			background black
+
+		&::before
+			transform rotate(45deg)
+
+		&::after
+			transform rotate(-45deg)
+
+.mainMenu6__list
+	margin auto 0 0
+	padding 0
+	list-style none
+	display none
+	overflow-y auto
+	-ms-overflow-style none
+	scrollbar-width none
+
+	&::-webkit-scrollbar
+		display none
+
+.mainMenu6__item
+	@media(max-width upToDesktop)
+		margin-top 20px
+
+		&:first-child
+			margin-top 0
+
+		&:last-child
+			margin-bottom 48px
+
+	@media(min-width tablet) and (max-width upToDesktop)
+		&:last-child
+			margin-bottom 64px
+
+	@media(min-width desktop)
+		margin-top 32px
+
+		&:first-child
+			margin-top 0
+
+		&:last-child
+			margin-bottom 76px
+
+.mainMenu6__link
+	text-decoration none
+	color black
+	@media(min-width desktop)
+		text-transform uppercase
+
+.mainMenu6__header
+	padding-bottom 24px
+	background white
+	display none
+
+.mainMenu6__phone
+	text-decoration none
+	display none
+	flex-shrink 0
+
+	@media(max-width upToDesktop)
+		color black
+		padding-top 20px
+		margin-bottom 20px
+		border-top 1px solid currentColor
+
+	@media(min-width tablet) and (max-width upToDesktop)
+		padding-top 29px
+		margin-bottom 32px
+
+	@media(min-width desktop)
+		color headerText
+		margin-left 40px
+		display table
+		margin-right 24px
+		max-width 150px
+
+.mainMenu6
+	flex-shrink 0
+
+	&--active
+		z-index 1
+		background white
+		display flex
+		flex-direction column
+		position fixed
+		left 0
+		top 0
+		width 100%
+		height var(--app-height, 100vh)
+		padding 25px 24px 0
+
+		@media(min-width tablet)
+			padding-top 24px
+			padding-left 32px
+			padding-right 32px
+
+		@media(min-width desktop)
+			padding-top 26px
+
+		.mainMenu6__list
+			display block
+
+		.mainMenu6__header
+			display flex
+
+		.mainMenu6__phone
+			display table
+
+			@media(min-width desktop)
+				color black
+				position absolute
+				right 44px
+				top 24px
+
+	@media(min-width desktop)
+		margin-left auto
+
+@media(min-width 1200px)
+	.mainMenu6--active
+		padding-left calc((100% - 1200px) / 2)
+		padding-right calc((100% - 1200px) / 2)
+
+		.mainMenu6__phone
+			right calc((100% - 1200px) / 2 + 18px)

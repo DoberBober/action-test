@@ -1,0 +1,79 @@
+.partners4__list
+	@media(min-width desktop)
+		display grid
+		grid-template-columns 1fr 1fr 1fr
+		grid-gap 20px
+
+.partners4__item
+	background #F3F3F3
+	min-height 164px
+	padding 16px 16px 20px
+	@media(max-width desktop - 1px)
+		width 312px
+
+		& + &
+			margin-left 20px
+
+	@media(min-width desktop)
+		height 230px
+		padding 20px
+		position relative
+		overflow hidden
+		display flex
+		align-items center
+		justify-content center
+
+.partners4__itemLogoWrapper
+	width 96px
+	min-height 26px
+	margin-bottom 48px
+	@media(min-width desktop)
+		width 160px
+		min-height 45px
+		margin-bottom 0
+
+.partners4__logo, .partners4__video
+	display block
+	width 100%
+	height 100%
+	object-fit contain
+	object-position center
+
+.partners4__itemTextWrapper
+	@media(min-width desktop)
+		padding 20px 38px 24px 20px
+		background main2
+		color main2Text
+		width 100%
+		height 100%
+		position absolute
+		left 0
+		overflow-y auto
+		top 20px
+		opacity 0
+		transition 0.3s
+		-ms-overflow-style none
+		scrollbar-width none
+
+		&::-webkit-scrollbar
+			display none
+
+@media(min-width desktop)
+	.partners4__item:not(.partners4__item--withoutImg):not(.partners4__item--withoutText):hover
+		.partners4__itemTextWrapper
+			top 0
+			opacity 1
+
+	.partners4__item--withoutImg
+		.partners4__itemTextWrapper
+			top 0
+			opacity 1
+			background transparent
+
+		.partners4__itemText
+			color #000
+
+.partners4__itemText
+	color #000
+	@media(min-width desktop)
+		color main2Text

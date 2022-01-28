@@ -1,0 +1,115 @@
+.head10
+	padding 76px 0 60px
+	@media(min-width desktop)
+		padding 220px 0 110px
+
+.head10__heading
+	margin 0 -5px 12px
+	@media(min-width desktop)
+		margin 0 -24px 40px
+
+.head10__text
+	max-width 258px
+	@media(min-width desktop)
+		max-width 472px
+
+.head10__form
+	position relative
+	margin-top 40px
+	@media(min-width desktop)
+		margin-top 37px
+
+.head10__formInputWrapper
+	@media(min-width desktop)
+		flex-grow 1
+
+.head10__formInput
+	border none
+	border-bottom 1px solid mainText
+	color mainText
+	padding 0 28px 12px 0
+	display block
+	width 100%
+	@media(min-width desktop)
+		padding-bottom 10px
+
+	&::placeholder
+		color currentColor
+		opacity .5
+
+.head10__formSubmit
+	width 16px
+	height 16px
+	border none
+	background none
+	padding 0
+	position absolute
+	right 0
+	bottom 15px
+	display flex
+	align-items center
+	justify-content center
+	cursor pointer
+	transition 0.3s
+	@media(min-width desktop)
+		width 20px
+		height 20px
+
+	&:hover
+		opacity 0.3
+
+.head10__formSubmitIcon
+	color mainText
+
+.head10__imgWrapper
+	margin-top 72px
+	height 192px
+	@media(min-width desktop)
+		margin-top 32px
+		height 675px
+
+.head10__img, .head10__video
+	display block
+	width 100%
+	height 100%
+	object-fit cover
+
+@media(min-width desktop)
+	.head10__container
+		display grid
+		grid-template-columns 472px 472px
+		grid-template-rows min-content min-content min-content min-content
+		justify-content space-between
+
+	.head10__heading
+		grid-column 1/3
+		grid-row 1/2
+
+	.head10__text
+		grid-column 1/2
+		grid-row 2/3
+
+	.head10__form
+		grid-column 2/3
+		grid-row 2/3
+
+	.head10__imgWrapper
+		grid-column 1/3
+		grid-row 3/4
+
+.head10--withoutImg
+	height var(--app-height, 100vh)
+	display flex
+	flex-direction column
+	justify-content center
+	@media(min-width desktop)
+		min-height 860px
+		height auto
+
+	.head10__imgWrapper
+		display none
+
+@media(min-width desktop)
+	.head10__heading
+		&.heading--size-2, &.heading--size-3, &.heading--size-4, &.heading--size-5, &.heading--size-6, &.heading--size-7, &.heading--size-8, &.heading--size-9
+			margin-bottom 72px

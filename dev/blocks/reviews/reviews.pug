@@ -1,0 +1,58 @@
+-
+	 var title = "О Skillbox: отзывы"
+-
+	 var reviews = [
+				{
+					'name': 'Мария Боровская',
+					'text': 'Я решила сама разобраться в таргетинге, чтобы полностью контролировать процессы рекламы.',
+					'post': 'Основатель MBDS design studio',
+					'photo': 'review.jpg'
+				},
+				{
+					'name': 'Мария Боровская',
+					'text': 'Новая профессия — это множество ярких впечатлений. Сегодня была на вручении региональной бизнес-премии. И это лишь одно из таких событий, произошедших в моей жизни после того, как я прошла курс и стала SMM-маркетологом.',
+					'post': 'Основатель MBDS design studio',
+					'photo': 'review.jpg'
+				},
+				{
+					'name': 'Мария Боровская',
+					'text': 'Я решила сама разобраться в таргетинге, чтобы полностью контролировать процессы рекламы.',
+					'post': 'Основатель MBDS design studio',
+					'photo': 'review.jpg'
+				},
+				{
+					'name': 'Мария Боровская',
+					'text': 'Новая профессия — это множество ярких впечатлений. Сегодня была на вручении региональной бизнес-премии. И это лишь одно из таких событий, произошедших в моей жизни после того, как я прошла курс и стала SMM-маркетологом.',
+					'post': 'Основатель MBDS design studio',
+					'photo': 'review.jpg'
+				}
+			]
+-
+	 var text = [
+				'Skillbox — это онлайн-университет. У нас прикладные курсы и программы от главных экспертов рынка, актуальные подходы к обучению, работа над реальными проектами, стажировки и трудоустройство в крупнейшие компании страны.',
+				'Тестовый второй параграф.'
+			]
+- var className = 'section reviews'
+if extraClass
+	- className = 'section reviews reviews--' + extraClass
+
+
+
+section(class=className)#reviews
+	.container.reviews__container
+		h2.reviews__heading.heading !{title}
+
+		if text
+			.reviews__desc.text
+				each paragraph in text
+					p= paragraph
+
+		.reviews__list
+			each review in reviews
+				.reviews__item
+					.reviews__text !{review['text']}
+					.reviews__info
+						img(src='./images/' + review['photo'] alt=review['name']).reviews__photo
+						.reviews__video.hidden
+						.reviews__name !{review['name']}
+						.reviews__post !{review['post']}

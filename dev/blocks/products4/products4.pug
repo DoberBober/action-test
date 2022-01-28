@@ -1,0 +1,41 @@
+section.section.productsBlock.products4#products4
+	.container.products4__container
+		h2.products4__heading.heading Closed events for students
+
+		.products4__desc.text
+			p Join the professional community, you can ask any question to specialists and make new useful contacts. Skillbox is an online university
+
+
+		.products4__list
+			- var i = 0
+			while i < 6
+				- i = i + 1
+				.products4__item
+					.products4__itemImgWrapper
+						a(href="#").products4__itemLink
+							img(src="./images/products.jpg", alt="").products4__itemImg
+					.products4__itemWrapper 
+						h3.products4__itemTitle Черная футболка с принтом #{i}
+						.products4__itemPrice 799#{i} ₽
+						.products4__itemDesc Предложите выгодную акцию для пользователя, или сообщите ему, что это тот самый момент, чтобы начать с вами работу #{i}
+
+		.products4__modalOverlay.isPopupOverlay
+			button(type="button" aria-label="Закрыть модалку").products4__modalClose
+			
+		.products4__modal
+			.products4__modalImgWrapper
+				img(src="", alt="").products4__modalImg
+			.products4__modalWrapper
+				h3.products4__modalName
+				.products4__modalPrice
+				.products4__modalDescription
+			form.products4__modalForm
+				.products4__modalFormBlock
+					input(type="text" placeholder="Имя").products4__modalFormInput
+				.products4__modalFormBlock
+					input(type="text" placeholder="Почта").products4__modalFormInput
+				button(type="submit").products4__modalFormSubmit Сделать заказ
+
+			.products4__modalSuccessText
+				.products4__modalSuccessTextIcon
+				p Ваша заявка отправлена

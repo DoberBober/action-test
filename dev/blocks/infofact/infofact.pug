@@ -1,0 +1,32 @@
+-
+	 var facts = [
+				{
+					'title': '8',
+					'text': 'Различных направлений тренировкок'
+				},
+				{
+					'title': '60 мин',
+					'text': 'Продолжительность одной онлайн тренировки'
+				},
+				{
+					'title': '>1000 человек',
+					'text': 'Продолжительность одной онлайн тренировки'
+				},
+				{
+					'title': '1000 медалей 9213 наград',
+					'text': 'Продолжительность одной онлайн тренировки'
+				}
+			]
+
+- var className = 'section infofact'
+if extraClass
+	- className = 'section infofact infofact--' + extraClass
+
+
+section(class=className)#infofact
+	.container.infofact__container
+		.infofact__list
+			each fact in facts
+				.infofact__item
+					h3.infofact__name !{fact['title']}
+					p.infofact__desc !{fact['text']}

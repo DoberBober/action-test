@@ -1,0 +1,58 @@
+-
+	 var title = 'Стоимость обучения'
+-
+	 var desc = [
+				'Skillbox — это онлайн-университет. У нас прикладные курсы и программы от главных экспертов рынка, актуальные подходы к обучению, работа над реальными проектами, стажировки и трудоустройство в крупнейшие компании страны.',
+				'Тестовый параграф'
+			]
+
+- var className = 'section price'
+if extraClass
+	- className = 'section price price--' + extraClass
+
+
+
+section(class=className)#price
+	.container.price__container
+		h2.price__heading.heading !{title}
+
+		if desc
+			.price__desc.text
+				each paragraph in desc
+					p= paragraph
+
+		.price__body
+			.price__card
+				.price__dates
+					.price__start Старт&nbsp;
+						span 21 января
+					.price__end Осталось&nbsp;
+						span 15 мест
+
+				.price__info
+					.price__firstPayment Первый платёж через 6 месяцев
+					.price__price 5 532
+						i.ruble
+					.price__discount -40%
+					.price__period в месяц
+
+				.price__discountInfo Рассрочка без скидки
+					.price__priceWithoutDiscount 11 064
+						i.ruble.ruble--oldPrice
+						| /месяц
+
+			form(action="#").price__form#priceForm
+				h3.price__formName Записаться на курс или получить бесплатную консультацию
+
+				label(for="priceName").visually-hidden Введите ваше имя
+				input(type="text" name="priceName" id="priceName" placeholder="Имя").price__input.price__input--halfWidth.price__userData
+				label(for="priceTel").visually-hidden Введите ваш телефон
+				input(type="tel" name="priceTel" id="priceTel" placeholder="Телефон").price__input.price__input--halfWidth.price__userData
+				label(for="priceEmail").visually-hidden Введите ваш email
+				input(type="email" name="priceEmail" id="priceEmail" placeholder="Email").price__input.price__userData
+
+				button(type="submit").price__submit Записаться на курс
+
+				input(type="checkbox" name="priceAgreement" id="priceAgreement").price__userData.price__checkbox.visually-hidden
+				label(for="priceAgreement").price__label Я соглашаюсь на обработку 
+					a(href="#") персональных данных

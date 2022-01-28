@@ -1,0 +1,50 @@
+-
+	var title = "Социальные сети"
+-
+	var list = [
+				{
+					'icon': 'twitter.svg',
+					'name': 'Подписывайтесь на наш твиттер'
+				},
+				{
+					'icon': 'fb.svg',
+					'name': 'Вступайте в группу в фейсбуке'
+				},
+				{
+					'icon': 'vk.svg',
+					'name': 'Вступайте в группу вконтакте'
+				},
+				{
+					'icon': 'instagram.svg',
+					'name': 'Подписывайтесь на инстаграм'
+				}
+			]
+-
+	var desc = [
+				'Вы можете написать нам по любому интересующему вас вопросу: от обучения до сотрудничества.',
+				'Тестовый параграф'
+			]
+
+- var className = 'section social'
+if extraClass
+	- className = 'section social social--' + extraClass
+
+
+section(class=className)#social
+	.container.social__container
+		h2.social__heading.heading !{title}
+
+		if desc
+			.social__desc.text
+				each paragraph in desc
+					p= paragraph
+
+		ul.social__list
+			li.social__item
+				a(href="#" aria-label="Подписывайтесь на наш твиттер").social__link.social__link--twitter
+			li.social__item
+				a(href="#" aria-label="Вступайте в группу в фейсбуке").social__link.social__link--fb
+			li.social__item
+				a(href="#" aria-label="Вступайте в группу вконтакте").social__link.social__link--vk
+			li.social__item
+				a(href="#" aria-label="Подписывайтесь на инстаграм").social__link.social__link--instagram

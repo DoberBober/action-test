@@ -1,0 +1,21 @@
+// Чтобы отобразить сообщение после отправки, надо накинуть модификатор .popupForm5--success.
+.isPopup.popupForm5
+	img(src="./images/popupForm5.jpg", alt="").popupForm5__img
+	h2.popupForm5__heading Закажите дизайн сайта со скидкой 30%
+	.popupForm5__text Предложите выгодную акцию для пользователя, или сообщите ему, что это тот самый момент, чтобы начать с вами работу.
+	
+	form.popupForm5__form(action="#") 
+		.popupForm5__formBlock 
+			input(type="text" placeholder="Email" id="popupForm5-1" name="popupForm5-1").popupForm5__input
+			label(for="popupForm5-1").visually-hidden Введите ваш email 
+		.popupForm5__formBlock 
+			input(type="text" placeholder="Address" id="popupForm5-2" name="popupForm5-2").popupForm5__input
+			label(for="popupForm5-2").visually-hidden Введите ваш адрес
+
+		button(type="submit").popupForm5__submit Сделать заказ
+
+		input(type="hidden" name="domainName")
+
+	.popupForm5__successText
+		.popupForm5__successTextIcon
+		p Ваша заявка отправлена

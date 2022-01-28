@@ -1,0 +1,42 @@
+- var logo = false
+- var sticky = true
+- var animated = true
+- var menu = ['Pricing', 'Reviews', 'Portfolio']
+
+- var headerClassNames = 'header4'
+
+if sticky
+	- headerClassNames = headerClassNames + ' headerSticky'
+
+if animated
+	- headerClassNames = headerClassNames + ' headerAnimate'
+
+section(class=headerClassNames)#header4
+	.container.header4__container
+		if logo
+			a(href="#").header4__logo
+				img(src="https://via.placeholder.com/500x500", alt="Название компании")
+		else
+			a(href="#").header4__logo Рога и Копыта
+
+		nav.header4__nav.mainMenu4
+			.mainMenu4__header.onlyMobile
+				if logo
+					a(href="#").mainMenu4__logo
+						img(src="https://via.placeholder.com/500x500", alt="Название компании")
+						img(src="" + logo, alt="Название компании").hidden
+				else
+					a(href="#").mainMenu4__logo Рога и Копыта
+
+				button(type="button" aria-label="Закрыть меню").header4__menuChecker.header4__menuChecker--close
+					.header4__menuCheckerLine
+
+			ul.mainMenu4__list
+				each item in menu
+					li.mainMenu4__item
+						a(href="#").mainMenu4__link !{item}
+
+			a(href="#").mainMenu4__phone +7 495 123 9876
+
+		button(type="button" aria-label="Открыть меню").header4__menuChecker.header4__menuChecker--open.onlyMobile
+			.header4__menuCheckerLine

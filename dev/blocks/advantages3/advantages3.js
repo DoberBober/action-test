@@ -1,0 +1,1 @@
+function advantages3Init() {}

@@ -1,0 +1,55 @@
+-
+	 var title = 'Кейсы'
+-
+	 var list = [
+					{
+						'tag': 'Маркетинг',
+						'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА',
+						'img': 'case-1.jpg',
+
+					},
+					{
+						'tag': 'Маркетинг и рекламные компании для крупных клиентов по всем Регионам Москвы и Московской области',
+						'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА НАродной медицины',
+						'img': 'case-2.jpg',
+
+					},
+					{
+						'tag': 'Маркетинг',
+						'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА',
+						'img': 'case-3.jpg',
+
+					},
+					{
+						'tag': 'Маркетинг',
+						'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА НАродной медицины',
+						'img': '',
+
+					},
+					{
+						'tag': 'Маркетинг',
+						'name': 'Диплом Всероссийской организации качества ПОЛИКЛИНИКА',
+						'img': 'case-1.jpg',
+
+					}
+				]
+
+- var className = 'section cases'
+if extraClass
+	- className = 'section cases cases--' + extraClass
+
+
+section(class=className)#cases
+	.container.cases__container
+		h2.cases__heading.heading !{title}
+		.cases__list
+			each item in list
+				.cases__item
+					.cases__tag !{item['tag']}
+					h3.cases__title
+						a(href="#").cases__link !{item['name']}
+					if item['img']
+						img(src="./images/" + item['img'], alt="").cases__img
+
+		include ../_pagination/_pagination.pug
+		+pagination('pagination--bottom')

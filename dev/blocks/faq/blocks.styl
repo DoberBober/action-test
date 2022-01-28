@@ -1,0 +1,94 @@
+.faq__answer
+	overflow-y auto
+	opacity 0
+	transition 0.25s
+	max-height 0
+	-ms-overflow-style: none;
+	scrollbar-width none
+
+	&::-webkit-scrollbar
+		display none
+
+.faq__item--open
+	.faq__answer
+		max-height 400px
+		opacity 1
+
+	.faq__questionBtn
+		svg
+			transform rotate(45deg)
+
+.faq__list
+	margin 0
+	padding 0
+	list-style none
+
+.faq__item
+	border-bottom 1px solid
+	padding 16px 0
+	@media(min-width desktop)
+		padding 20px 0
+
+	&:first-of-type
+		border-top 1px solid
+
+.faq__question
+	margin 0
+
+.faq__questionBtn
+	width 100%
+	text-align left
+	padding 0
+	border none
+	background none
+	cursor pointer
+	padding-right 34px
+	position relative
+	@media(max-width desktop - 1px)
+		display grid
+		grid-template-columns 278px 1fr
+
+	svg
+		position absolute
+		right 0
+		top 3px
+		color mainText
+		flex-shrink 0
+		margin-left 16px
+		display block
+		transition 0.3s
+		@media(min-width desktop)
+			top 0
+			width 28px
+			height 28px
+
+		&:first-child
+			margin-left auto
+
+.faq__answer
+	max-width 278px
+	@media(min-width desktop)
+		max-width 472px
+
+	p
+		margin 0
+		padding 10px 0 12px
+		@media(min-width desktop)
+			padding 12px 0 28px
+
+.faq__link
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 25px
+	display table
+	transition 0.3s
+	margin-top 24px
+
+	@media(min-width desktop)
+		margin-top 40px
+
+	&:hover
+		background mainText
+		color main

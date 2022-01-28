@@ -1,0 +1,959 @@
+@import 'helpers/mixins'
+@import 'helpers/variables'
+
+webfont('Proxima Nova', 'ProximaNovaLight', 300)
+webfont('Proxima Nova', 'ProximaNovaRegular', 400)
+
+html
+	height 100%
+	box-sizing border-box
+	-webkit-font-smoothing antialiased
+	--app-height 100%
+	scroll-behavior smooth
+	overflow-x hidden
+
+body
+	min-height 100%
+	min-width 320px
+	margin 0
+	overflow-x hidden
+	text-rendering optimizeLegibility
+	-webkit-text-rendering optimizeLegibility
+	font-family proxima
+	background main
+	color mainText
+
+.container
+	max-width 1264px
+	margin 0 auto
+	padding 0 24px
+
+	@media (min-width desktop)
+		padding 0 32px
+
+.section
+	padding-top 60px
+	padding-bottom 60px
+
+	@media (min-width tablet)
+		padding-top 90px
+		padding-bottom 90px
+
+	@media (min-width desktop)
+		padding-top 110px
+		padding-bottom 110px
+
+input[type="submit"]
+	cursor pointer
+
+.section
+	background main
+	color mainText
+
+	*
+		color mainText
+
+.headerWithBg, [class^="header"]:not(.headerWithBg)
+	a
+		transition 0.3s
+
+.video-js
+	width 100%
+	height 100%
+
+// .head, .head2, .head3, .head4, .head5, .head6, .head7, .head8, .head9, .cta
+// 	& + .section:not(.cta):not(.head):not(.head2):not(.head3):not(.head4):not(.head5):not(.head6):not(.head7):not(.head8):not(.head9):not(.e404)
+// 		padding-top 120px
+
+// 		@media (min-width tablet)
+// 			padding-top 180px
+
+// 		@media (min-width desktop)
+// 			padding-top 220px
+
+// .head__img, .head__video, .head4__img, .head4__video, .head5__img, .head5__video, .head7__img, .head7__video,
+.about__img, .about__video, .about3__img, .about3__video, .about4__img, .about4__video, .about5__img, .about5__video,
+.advantages2__img, .advantages2__video, .advantages3__mainImg, .advantages3__video,
+.cases2__img, .cases2__video, .cases5__img, .cases5__video, .cases6__img, .cases6__video,
+.gallery__photo, .gallery__video, .gallery2__photo, .gallery2__video, .gallery3__photo, .gallery3__video, .gallery4__photo, .gallery4__video, .gallery5__photo, .gallery5__video, .gallery6__photoClone, .gallery6__video,
+.reviews__photo, .reviews__video, .team__photo, .team__video
+	border 1px solid img-border
+
+.section--third
+	// margin-top 30px
+	// margin-bottom 30px
+	padding-top 90px
+	padding-bottom 90px
+	background main3
+
+	// a, button
+	// 	color main3Text
+	// 	border-color main3Text
+
+		// &:hover
+		// 	background main3Text
+		// 	color main3
+
+	// .head__img, .head__video, .head4__img, .head4__video, .head5__img, .head5__video, .head7__img, .head7__video,
+	.about__img, .about__video, .about3__img, .about3__video, .about4__img, .about4__video, .about5__img, .about5__video,
+	.advantages2__img, .advantages2__video, .advantages3__mainImg, .advantages3__video,
+	.cases2__img, .cases2__video, .cases5__img, .cases5__video, .cases6__img, .cases6__video,
+	.gallery__photo, .gallery__video, .gallery2__photo, .gallery2__video, .gallery3__photo, .gallery3__video, .gallery4__photo, .gallery4__video, .gallery5__photo, .gallery5__video, .gallery6__photoClone, .gallery6__video,
+	.reviews__photo, .reviews__video, .team__photo, .team__video
+		border 1px solid img-border3
+
+	@media (min-width tablet)
+		// margin-top 45px
+		// margin-bottom 45px
+		padding-top 135px
+		padding-bottom 135px
+
+	@media (min-width desktop)
+		// margin-top 55px
+		// margin-bottom 55px
+		padding-top 165px
+		padding-bottom 165px
+
+	& + .section:not(.cta):not(.head):not(.head2):not(.head3):not(.head4):not(.head5):not(.head6):not(.head7):not(.head8):not(.head9):not(.e404)
+		padding-top 90px
+
+		@media (min-width tablet)
+			padding-top 135px
+
+		@media (min-width desktop)
+			padding-top 165px
+
+	*, .heading
+		color main3Text
+
+.heading
+	position relative
+	margin 0 0 21px
+	color mainText
+	max-width 100%
+	h2()
+
+	@media (min-width tablet)
+		margin-bottom 25px
+
+	@media (min-width desktop)
+		margin-bottom 35px
+
+	&::after
+		content ''
+		position absolute
+		bottom -9px
+		left -100vw
+		width 300vw
+		height 1px
+		background currentColor
+		@media (min-width desktop)
+			bottom -11px
+
+.constructorActive
+	.heading
+		&::after
+			left calc((100vw - 100%) / -2 + 4px)
+			width calc(100vw - 8px)
+
+.text
+	max-width 467px
+	margin 0 0 33px
+	color mainText
+	accent()
+
+	@media (min-width tablet)
+		margin-bottom 55px
+
+	@media (min-width desktop)
+		max-width 576px
+		margin-bottom 100px
+
+.text, .head__text, .head2__text, .head3__text, .head4__text, .head5__text, .head6__text, .head7__text, .head8__text, .head9__text, .head10__text
+	p
+		margin 0
+
+		& + p
+			margin-top 1em
+
+// .container *
+	// word-break break-word
+
+.about
+	.about__btnWrapper + .about__btnWrapper,
+	.about__imgAdminWrapper + .about__imgAdminWrapper + .about__imgAdminWrapper
+		display none
+
+.about3
+	.about3__btn + .about3__btn
+		display none
+
+	.about3__imgAdminWrapper:nth-child(n+4)
+		display none
+
+.about4
+	.about4__img + .about4__img
+		display none
+
+.about5
+	.about5__img + .about5__img
+		display none
+
+.head2
+	.head2__button + .head2__button
+		display none
+
+.head4
+	.head4__button + .head4__button
+		display none
+
+.head5
+	.head5__button + .head5__button
+		display none
+
+.scrollOff
+	overflow hidden
+
+button, input, textarea
+	font-family inherit
+	background transparent
+	border-radius 0
+
+button, input, textarea, select
+	appearance none
+
+*, *::before, *::after
+	box-sizing inherit
+
+*:focus
+	outline none
+
+img
+	max-width 100%
+	height auto
+
+.sprite
+	display none
+
+.hidden, .invisible
+	display none !important
+
+.visually-hidden
+	position absolute
+	width 1px
+	height 1px
+	margin -1px
+	padding 0
+	border none
+	overflow hidden
+	white-space nowrap
+	clip rect(0,0,0,0)
+	clip-path inset(100%)
+
+.zeroScroll
+	-ms-overflow-style none
+	scrollbar-width none
+
+	&::-webkit-scrollbar
+		display none
+
+.onlyMobile
+	@media(min-width desktop)
+		display none !important
+
+.onlyDesktop
+	@media(max-width upToDesktop)
+		display none !important
+
+.isPopupOverlay
+	position fixed
+	left 0
+	top 0
+	width 100vw
+	height 100vh
+	background rgba(0,0,0,0.8)
+	z-index 99
+
+.isPopup
+	z-index 100
+	overflow-y auto
+	-ms-overflow-style none
+	scrollbar-width none
+
+	&::-webkit-scrollbar
+		display none
+
+.isPopup__close
+	width 32px
+	height 32px
+	position absolute
+	right 16px
+	top 16px
+	border none
+	display flex
+	align-items center
+	justify-content center
+	z-index 100
+	background #fff
+	border-radius 100%
+	cursor pointer
+	transition 0.3s
+	padding 8px
+
+	@media(min-width desktop)
+		width 48px
+		height 48px
+		padding 12px
+
+	svg
+		display block
+		fill main2Text
+
+	&:hover
+		opacity 0.75
+
+// Ответ после отправки формы.
+.successOverlay
+	display block
+	position fixed
+	left 0
+	top 0
+	width 100vw
+	height 100vh
+	background rgba(0, 0, 0, 0.8)
+	z-index 100
+	visibility hidden
+	opacity 0
+	transition 0.3s
+
+.successPopup
+	position fixed
+	left 50%
+	top 50%
+	transform translate(-50%, 0%)
+	z-index 101
+	visibility hidden
+	opacity 0
+	transition 0.3s
+	padding 30px 30px 40px
+	text-align center
+	background #fff
+	max-width 500px
+
+.successPopup__iconWrapper
+	display table
+	margin 0 auto 24px
+
+.successPopup__text, .successPopup__iconWrapperSvg
+	color #000
+
+.blockFormSent
+	.successOverlay, .successPopup
+		visibility visible
+		opacity 1
+	.successPopup
+		transform translate(-50%, -50%)
+// // //
+
+@import '../blocks/*/fonts.styl'
+@import '../blocks/*/blocks.styl'
+
+body:not(.constructorActive) .isPopup:not(.isPopup--visible)
+	display none
+
+.constructorActive .isPopup
+	position relative !important
+	left 0 !important
+	top 0 !important
+	right 0 !important
+	bottom 0 !important
+	transform none !important
+	margin-left auto
+	margin-right auto
+	height auto !important
+	min-height initial !important
+
+.cookie
+	z-index 10
+	position fixed
+	left 0
+	bottom 0
+	width 100%
+	background main
+	color mainText
+	padding 28px 24px
+
+	@media(min-width tablet)
+		padding 26px
+
+	@media(min-width desktop)
+		padding 16px
+
+.cookie__container
+	@media(min-width tablet)
+		display flex
+		align-items center
+		justify-content space-between
+
+	p
+		margin 0
+		accent()
+
+	button
+		accent()
+		border 1px solid mainBtnText
+		background mainBtn
+		color mainBtnText
+		margin-top 16px
+		padding 0
+		border-radius 60px
+		padding 9px 23px
+
+		@media(min-width tablet)
+			margin-top 0
+			margin-left 16px
+
+	b, a
+		font-weight normal
+
+.header + .head,
+.header + .head2,
+.header + .head3,
+.header + .head4,
+.header + .head5
+	margin-top -70px
+	padding 95px 0 0
+
+	@media(min-width tablet)
+		margin-top -72px
+		padding-top 127px
+
+	@media(min-width desktop)
+		margin-top -85px
+		padding-top 165px
+
+.flickity-button
+	width 32px
+	height 32px
+	border 1px solid currentColor
+	display flex
+	align-items center
+	justify-content center
+	border-radius 100%
+
+	@media(min-width tablet)
+		width 40px
+		height 40px
+
+	@media(min-width desktop)
+		width 48px
+		height 48px
+
+	& + &
+		margin-left 8px
+
+		@media(min-width tablet)
+			margin-left 12px
+
+	&[disabled] + &
+		margin-left 0
+
+.flickity-prev-next-button
+	border-color mainText
+	color mainText
+	transition 0.3s
+
+	&:hover
+		color main
+		background mainText
+
+		svg
+			fill main
+
+.flickity-prev-next-button .flickity-button-icon
+	width 17px
+	height 17px
+	fill mainText
+	display block
+
+.flickity-prev-next-button.previous
+	svg
+		margin-top 1px
+
+.flickity-buttons-wrapper
+	display flex
+	margin-top 24px
+
+	@media(min-width tablet)
+		margin-top 0
+
+.review, .team, .partners
+	.flickity-buttons-wrapper
+		@media(min-width tablet)
+			margin-top 0
+
+.rates
+	.flickity-buttons-wrapper
+		@media(max-width upToDesktop)
+			display none
+
+@media(min-width tablet)
+	.team, .reviews, .partners, .gallery, .gallery4, .gallery5, .rates, .cases2, .cases3, .cases4, .cases5, .rates6, .reviews2
+		overflow hidden
+
+		.container
+			position relative
+
+		.flickity-enabled
+			position static
+
+		.flickity-buttons-wrapper
+			position absolute
+			right 32px
+			top 90px
+			top var(--btn-top, 90px)
+
+@media(min-width tablet) and (max-width upToFullDesktop)
+	.team, .reviews, .partners, .gallery, .gallery4, .gallery5, .rates, .cases2, .cases3, .cases4, .cases5, .rates6, .reviews2
+		.flickity-buttons-wrapper
+			right 20px
+
+
+.flickity-prev-next-button[disabled]
+	display none
+
+.headerSticky
+	position fixed
+	left 0
+	top 0
+	z-index 3
+
+.constructorActive
+	.cookie
+		display none !important
+
+	.header, .header2, .header3, .header4, .header5, .header6, .header7
+		position absolute
+		// transform none
+		// left initial
+		// right initial
+		// top initial
+		// bottom initial
+		// margin-left auto
+		// margin-right auto
+		// opacity 1
+
+.header2, .header3, .header4, .header5, .header6, .header7
+	transition background-color .5s
+
+.headerAnimate
+	position fixed
+	left 0
+	top 0
+	z-index 3
+	width 100%
+	transition transform .5s, opacity .5s, background-color .5s
+
+.headerHidden
+	transform translateY(-100%)
+	opacity 0
+
+.header2, .header3, .header4, .header5, .header6, .header7
+	& + .section
+		margin-top 0 !important
+
+.header, .header2, .header3, .header4, .header5, .header6, .header7
+	position fixed
+	left 0
+	top 0
+	z-index 3
+
+.header2, .header3, .header4, .header5, .header6, .header7
+	&:not(.headerWithBg)
+		background-color transparent
+		border-color transparent
+		box-shadow none
+
+body:not(.constructorActive).pageStart
+	.header2.headerWithBg, .header3.headerWithBg, .header4.headerWithBg, .header5.headerWithBg, .header6.headerWithBg, .header7.headerWithBg
+		background-color transparent
+		border-color transparent
+		box-shadow none
+
+// Анимация при скролле.
+body:not(.constructorActive) .section .container
+	transition all 1s ease
+	margin-top 2em
+	opacity 0
+
+body:not(.constructorActive) .section .container.visible
+	margin-top 0
+	opacity 1
+
+// Размер заголовков.
+	//
+	// .heading--size-1 - стандартный.
+	//
+
+.head__heading, .head2__heading, .head3__heading, .head4__heading, .head5__heading, .head6__heading, .head7__heading, .head8__heading, .head10__heading
+	&.heading--size-2
+		font-size 68px
+	&.heading--size-3
+		font-size 54px
+	&.heading--size-4
+		font-size 46px
+	&.heading--size-5
+		font-size 40px
+	&.heading--size-6
+		font-size 36px
+	&.heading--size-7
+		font-size 32px
+	&.heading--size-8
+		font-size 30px
+	&.heading--size-9
+		font-size 28px
+
+.head__heading, .head2__heading, .head5__heading, .head6__heading, .head7__heading, .head8__heading, .head10__heading
+	&.heading--size-2
+		@media(min-width desktop)
+			font-size 265px
+			line-height 0.85
+	&.heading--size-3
+		@media(min-width desktop)
+			font-size 190px
+			line-height 0.85
+	&.heading--size-4
+		@media(min-width desktop)
+			font-size 170px
+			line-height 0.85
+	&.heading--size-5
+		@media(min-width desktop)
+			font-size 160px
+			line-height 0.85
+	&.heading--size-6
+		@media(min-width desktop)
+			font-size 130px
+			line-height 0.85
+	&.heading--size-7
+		@media(min-width desktop)
+			font-size 110px
+			line-height 0.9
+	&.heading--size-8
+		@media(min-width desktop)
+			font-size 90px
+			line-height 0.9
+	&.heading--size-9
+		@media(min-width desktop)
+			font-size 80px
+			line-height 0.9
+
+.head3__heading, .head4__heading
+	&.heading--size-2
+		@media(min-width desktop)
+			font-size 112px
+	&.heading--size-3
+		@media(min-width desktop)
+			font-size 96px
+	&.heading--size-4
+		@media(min-width desktop)
+			font-size 84px
+	&.heading--size-5
+		@media(min-width desktop)
+			font-size 76px
+	&.heading--size-6
+		@media(min-width desktop)
+			font-size 67px
+	&.heading--size-7
+		@media(min-width desktop)
+			font-size 62px
+	&.heading--size-8
+		@media(min-width desktop)
+			font-size 56px
+	&.heading--size-9
+		@media(min-width desktop)
+			font-size 52px
+
+// .head, .head2, .head3, .head4, .head5, .head6, .head7, .head8, .head9
+// 	padding-bottom 60px
+
+// .head, .head3, .head4, .head5
+// 	padding-bottom 0
+
+// .head6
+// 	@media(min-width desktop)
+// 		padding-bottom 110px
+
+// .head7
+// 	@media(min-width desktop)
+// 		padding-bottom 110px
+
+// .head8
+// 	@media(min-width desktop)
+// 		padding-bottom 110px
+
+// .head9
+// 	@media(min-width desktop)
+// 		padding-bottom 110px
+
+// .header2, .header3, .header4, .header5, .header6, .header7
+// 	& + .head, & + .head2, & + .head3, & + .head4, & + .head5, & + .head6, & + .head7, & + .head8, & + .head9
+// 		padding-top 97px
+
+// 	& + .head2
+// 		padding-top 97px
+// 		padding-bottom 97px
+
+// 		@media(min-width desktop)
+// 			padding-bottom 100px
+
+// .page-content__selected--header + .page-content__selected
+// 	.head, .head2, .head3, .head4, .head5, .head6, .head7, .head8, .head9
+// 		padding-top 97px
+
+// 	.head2
+// 		padding-top 97px
+// 		padding-bottom 97px
+
+// 		@media(min-width desktop)
+// 			padding-bottom 100px
+
+
+// @media(min-width tablet)
+// 	.header2
+// 		& + .head, & + .head2, & + .head3, & + .head4, & + .head5, & + .head6, & + .head7, & + .head8, & + .head9
+// 			padding-top 107px
+
+// 	.header3
+// 		& + .head, & + .head2, & + .head3, & + .head4, & + .head5, & + .head6, & + .head7, & + .head8, & + .head9
+// 			padding-top 121px
+
+// 	.header4
+// 		& + .head, & + .head2, & + .head3, & + .head4, & + .head5, & + .head6, & + .head7, & + .head8, & + .head9
+// 			padding-top 117px
+
+// 	.header5
+// 		& + .head, & + .head2, & + .head3, & + .head4, & + .head5, & + .head6, & + .head7, & + .head8, & + .head9
+// 			padding-top 107px
+
+// 	.header6
+// 		& + .head, & + .head2, & + .head3, & + .head4, & + .head5, & + .head6, & + .head7, & + .head8, & + .head9
+// 			padding-top 114px
+
+// 	.header7
+// 		& + .head, & + .head2, & + .head3, & + .head4, & + .head5, & + .head6, & + .head7, & + .head8, & + .head9
+// 			padding-top 121px
+
+// 	.page-content__selected--header-type-2 + .page-content__selected
+// 		.head, .head2, .head3, .head4, .head5, .head6, .head7, .head8, .head9
+// 			padding-top 107px
+
+// 	.page-content__selected--header-type-3 + .page-content__selected
+// 		.head, .head2, .head3, .head4, .head5, .head6, .head7, .head8, .head9
+// 			padding-top 121px
+
+// 	.page-content__selected--header-type-4 + .page-content__selected
+// 		.head, .head2, .head3, .head4, .head5, .head6, .head7, .head8, .head9
+// 			padding-top 117px
+
+// 	.page-content__selected--header-type-5 + .page-content__selected
+// 		.head, .head2, .head3, .head4, .head5, .head6, .head7, .head8, .head9
+// 			padding-top 107px
+
+// 	.page-content__selected--header-type-6 + .page-content__selected
+// 		.head, .head2, .head3, .head4, .head5, .head6, .head7, .head8, .head9
+// 			padding-top 114px
+
+// 	.page-content__selected--header-type-7 + .page-content__selected
+// 		.head, .head2, .head3, .head4, .head5, .head6, .head7, .head8, .head9
+// 			padding-top 121px
+
+// @media(min-width desktop)
+// 	.header2 + .head3, .page-content__selected--header-type-2 + .page-content__selected .head3
+// 		padding-top 67px
+
+// 	.header3 + .head3, .page-content__selected--header-type-3 + .page-content__selected .head3
+// 		padding-top 79px
+
+// 	.header4 + .head3, .page-content__selected--header-type-4 + .page-content__selected .head3
+// 		padding-top 70px
+
+// 	.header5 + .head3, .page-content__selected--header-type-5 + .page-content__selected .head3
+// 		padding-top 71px
+
+// 	.header6 + .head3, .page-content__selected--header-type-6 + .page-content__selected .head3
+// 		padding-top 70px
+
+// 	.header7 + .head3, .page-content__selected--header-type-7 + .page-content__selected .head3
+// 		padding-top 70px
+
+// 	.header2 + .head8, .page-content__selected--header-type-2 + .page-content__selected .head8
+// 		padding-top 151px
+// 		padding-top 140px
+
+// 	.header3 + .head8, .page-content__selected--header-type-3 + .page-content__selected .head8
+// 		padding-top 163px
+// 		padding-top 140px
+
+// 	.header4 + .head8, .page-content__selected--header-type-4 + .page-content__selected .head8
+// 		padding-top 154px
+// 		padding-top 140px
+
+// 	.header5 + .head8, .page-content__selected--header-type-5 + .page-content__selected .head8
+// 		padding-top 155px
+// 		padding-top 140px
+
+// 	.header6 + .head8, .page-content__selected--header-type-6 + .page-content__selected .head8
+// 		padding-top 154px
+// 		padding-top 140px
+
+// 	.header7 + .head8, .page-content__selected--header-type-7 + .page-content__selected .head8
+// 		padding-top 154px
+// 		padding-top 140px
+
+// 	.header2 + .head
+// 		padding-top 151px
+// 		padding-top 140px
+
+// 	.header3 + .head, .page-content__selected--header-type-3 + .page-content__selected .head
+// 		padding-top 163px
+// 		padding-top 140px
+
+// 	.header4 + .head, .page-content__selected--header-type-4 + .page-content__selected .head
+// 		padding-top 154px
+// 		padding-top 140px
+
+// 	.header5 + .head, .page-content__selected--header-type-5 + .page-content__selected .head
+// 		padding-top 155px
+// 		padding-top 140px
+
+// 	.header6 + .head, .page-content__selected--header-type-6 + .page-content__selected .head
+// 		padding-top 154px
+// 		padding-top 140px
+
+// 	.header7 + .head, .page-content__selected--header-type-7 + .page-content__selected .head
+// 		padding-top 154px
+// 		padding-top 140px
+
+// 	.header2 + .head2, .page-content__selected--header-type-2 + .page-content__selected .head2
+// 		padding-top 127px
+
+// 	.header3 + .head2, .page-content__selected--header-type-3 + .page-content__selected .head2
+// 		padding-top 139px
+
+// 	.header4 + .head2, .page-content__selected--header-type-4 + .page-content__selected .head2
+// 		padding-top 130px
+
+// 	.header5 + .head2, .page-content__selected--header-type-5 + .page-content__selected .head2
+// 		padding-top 131px
+
+// 	.header6 + .head2, .page-content__selected--header-type-6 + .page-content__selected .head2
+// 		padding-top 130px
+
+// 	.header7 + .head2, .page-content__selected--header-type-7 + .page-content__selected .head2
+// 		padding-top 130px
+
+// 	.header2 + .head5, .page-content__selected--header-type-2 + .page-content__selected .head5
+// 		padding-top 151px
+// 		padding-top 140px
+
+// 	.header3 + .head5, .page-content__selected--header-type-3 + .page-content__selected .head5
+// 		padding-top 163px
+// 		padding-top 140px
+
+// 	.header4 + .head5, .page-content__selected--header-type-4 + .page-content__selected .head5
+// 		padding-top 154px
+// 		padding-top 140px
+
+// 	.header5 + .head5, .page-content__selected--header-type-5 + .page-content__selected .head5
+// 		padding-top 155px
+// 		padding-top 140px
+
+// 	.header6 + .head5, .page-content__selected--header-type-6 + .page-content__selected .head5
+// 		padding-top 154px
+// 		padding-top 140px
+
+// 	.header7 + .head5, .page-content__selected--header-type-7 + .page-content__selected .head5
+// 		padding-top 154px
+// 		padding-top 140px
+
+// 	.header2 + .head7, .page-content__selected--header-type-2 + .page-content__selected .head7
+// 		padding-top 99px
+// 		padding-top 140px
+
+// 	.header3 + .head7, .page-content__selected--header-type-3 + .page-content__selected .head7
+// 		padding-top 111px
+// 		padding-top 140px
+
+// 	.header4 + .head7, .page-content__selected--header-type-4 + .page-content__selected .head7
+// 		padding-top 102px
+// 		padding-top 140px
+
+// 	.header5 + .head7, .page-content__selected--header-type-5 + .page-content__selected .head7
+// 		padding-top 103px
+// 		padding-top 140px
+
+// 	.header6 + .head7, .page-content__selected--header-type-6 + .page-content__selected .head7
+// 		padding-top 102px
+// 		padding-top 140px
+
+// 	.header7 + .head7, .page-content__selected--header-type-7 + .page-content__selected .head7
+// 		padding-top 102px
+// 		padding-top 140px
+
+// 	.header2 + .head6, .page-content__selected--header-type-2 + .page-content__selected .head6
+// 		padding-top 127px
+
+// 	.header3 + .head6, .page-content__selected--header-type-3 + .page-content__selected .head6
+// 		padding-top 139px
+
+// 	.header4 + .head6, .page-content__selected--header-type-4 + .page-content__selected .head6
+// 		padding-top 130px
+
+// 	.header5 + .head6, .page-content__selected--header-type-5 + .page-content__selected .head6
+// 		padding-top 131px
+
+// 	.header6 + .head6, .page-content__selected--header-type-6 + .page-content__selected .head6
+// 		padding-top 130px
+
+// 	.header7 + .head6, .page-content__selected--header-type-7 + .page-content__selected .head6
+// 		padding-top 130px
+
+// 	.header2 + .head9, .page-content__selected--header-type-2 + .page-content__selected .head9
+// 		padding-top 127px
+
+// 	.header3 + .head9, .page-content__selected--header-type-3 + .page-content__selected .head9
+// 		padding-top 139px
+
+// 	.header4 + .head9, .page-content__selected--header-type-4 + .page-content__selected .head9
+// 		padding-top 130px
+
+// 	.header5 + .head9, .page-content__selected--header-type-5 + .page-content__selected .head9
+// 		padding-top 131px
+
+// 	.header6 + .head9, .page-content__selected--header-type-6 + .page-content__selected .head9
+// 		padding-top 130px
+
+// 	.header7 + .head9, .page-content__selected--header-type-7 + .page-content__selected .head9
+// 		padding-top 130px
+
+// Slider custom dots.
+ol.slider-custom-dots
+	display flex
+	position static
+	margin-top 40px
+
+	.dot
+		flex-grow 1
+		height 1px
+		background #ddd
+
+		& + &
+			margin-left 8px
+
+		&.is-selected
+			background mainText
+
+.section--third
+	ol.slider-custom-dots
+		.dot.is-selected
+			background main3Text

@@ -1,0 +1,101 @@
+.gallery__images
+	margin 0
+	padding 0
+	list-style none
+
+.gallery__image
+	width 312px
+	margin-left 12px
+
+	@media(min-width tablet)
+		width 672px
+		margin-left 16px
+
+	@media(min-width desktop)
+		width 793px
+		margin-left 20px
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+
+.gallery__photo, .gallery__video
+	display block
+	object-fit cover
+	margin-bottom 16px
+	width 312px
+	height 194px
+
+	@media(min-width tablet)
+		width 672px
+		height 419px
+
+	@media(min-width desktop)
+		width 793px
+		height 495px
+		margin-bottom 20px
+
+.flickity-activated
+	.gallery__photo, .gallery__video
+		transition width .3s, height .3s
+
+.gallery__image:not(.is-selected)
+	.gallery__photo, .gallery__video
+		width 233px
+		height 145px
+
+		@media(min-width tablet)
+			width 374px
+			height 233px
+
+		@media(min-width desktop)
+			width 387px
+			height 241px
+
+.gallery__name
+	margin 0
+
+	@media(min-width desktop)
+		width 312px
+
+.gallery__post
+	display block
+	margin-top 8px
+	max-width 443px
+
+	@media(min-width desktop)
+		margin-top 0
+		width 273px
+		text-align left
+		margin-left auto
+
+.gallery__name, .gallery__post
+	opacity 0
+	transition opacity 0.15s
+
+.gallery__image.is-selected
+	.gallery__name, .gallery__post
+		opacity 1
+		transition opacity 0.3s 0.3s
+
+
+@media(min-width desktop)
+	.gallery__image
+		display grid
+		justify-content space-between
+		grid-template-columns 312px 1fr 273px
+
+	.gallery__photo, .gallery__video
+		grid-column 1/4
+		grid-row 1/2
+
+	.gallery__name
+		grid-column 1/2
+		grid-row 2/3
+		max-width 100%
+
+	.gallery__post
+		grid-column 3/4
+		grid-row 2/3
+		margin-left 0
+		max-width 100%
+

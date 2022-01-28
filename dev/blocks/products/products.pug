@@ -1,0 +1,89 @@
+-
+	 var title = 'Продукт'
+-
+	 var list = [
+					{
+						'url': 'product-1.jpg',
+						'name': 'Смарт-часы Samsung Galaxy Смарт-часы Samsung Galaxy Смарт-часы Samsung Galaxy Смарт-часы Samsung Galaxy Смарт-часы Samsung Galaxy',
+						'desc': '3,4 рейтинг',
+						'price': '10 000 200',
+						'oldPrice': '12 000 200'
+					},
+					{
+						'url': 'product-2.jpg',
+						'name': 'Смарт-часы Samsung Galaxy Watch Active2 SM-R830 Ваниль',
+						'desc': 'Краткое описание',
+						'price': '5 000',
+						'oldPrice': '7 200'
+					},
+					{
+						'url': 'product-3.jpg',
+						'name': 'Смарт-часы Samsung Galaxy Watch Active2 SM-R830 Ваниль',
+						'desc': 'Часы позволяют следить за пульсом и состоянием здоровья не выходя из дома',
+						'price': '900',
+						'oldPrice': ''
+					},
+					{
+						'url': 'product-4.jpg',
+						'name': 'Смарт-часы Samsung Galaxy Watch Active2 SM-R830 Ваниль',
+						'desc': '3,4 рейтинг',
+						'price': '3 000',
+						'oldPrice': ''
+					},
+					{
+						'url': 'product-1.jpg',
+						'name': 'Смарт-часы Samsung Galaxy',
+						'desc': '3,4 рейтинг',
+						'price': '10 000 200',
+						'oldPrice': '12 000 200'
+					},
+					{
+						'url': 'product-2.jpg',
+						'name': 'Смарт-часы Samsung Galaxy Watch Active2 SM-R830 Ваниль',
+						'desc': 'Краткое описание',
+						'price': '5 000',
+						'oldPrice': '7 200'
+					},
+					{
+						'url': 'product-3.jpg',
+						'name': 'Смарт-часы Samsung Galaxy Watch Active2 SM-R830 Ваниль',
+						'desc': 'Часы позволяют следить за пульсом и состоянием здоровья не выходя из дома',
+						'price': '900',
+					},
+					{
+						'url': 'product-4.jpg',
+						'name': 'Смарт-часы Samsung Galaxy Watch Active2 SM-R830 Ваниль',
+						'desc': '3,4 рейтинг',
+						'price': '3 000',
+						'oldPrice': ''
+					}
+				]
+
+- var className = 'section products'
+if extraClass
+	- className = 'section products products--' + extraClass
+
+
+section(class=className)#products
+	.container.products__container
+		h2.product__heading.heading !{title}
+
+		include ../_pagination/_pagination.pug
+		+pagination('pagination--top')
+
+		.product__list
+			each product in list
+				.product__item
+					img(src="./images/" + product['url'], alt=product['name']).product__img
+
+					h3.product__name !{product['name']}
+					.product__desc !{product['desc']}
+
+					.product__wrapper
+						.product__price !{product['price']}
+							i.ruble
+						if product['oldPrice']
+							del.product__oldPrice !{product['oldPrice']}
+								i.ruble.ruble--oldPrice
+
+		+pagination('pagination--bottom')

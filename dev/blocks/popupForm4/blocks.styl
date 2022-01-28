@@ -1,0 +1,174 @@
+.popupForm4
+	width 100vw
+	height calc(100vh - 64px)
+	padding 28px 24px
+	background main
+	color mainText
+	position fixed
+	left 0
+	bottom 0
+
+	@media(min-width desktop)
+		width 90vw
+		max-width 1008px
+		height 100vh
+		padding 20px 24px 32px
+
+	&::before
+		content ''
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height 100%
+		background linear-gradient(180deg, rgba(0, 0, 0, 0) 62.33%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+		z-index 1
+
+@media(max-width desktop - 1px)
+	.popupForm4
+		display grid
+		grid-template-columns 1fr 312px 1fr
+		grid-template-rows min-content min-content 1fr
+
+	.popupForm4__heading, .popupForm4__text, .popupForm4__form, .popupForm4__successText
+		grid-column 2/3
+
+@media(min-width desktop)
+	.popupForm4
+		display grid
+		grid-template-rows min-content min-content 1fr
+
+.popupForm4__heading, .popupForm4__text, .popupForm4__form, .popupForm4__successText
+	position relative
+	z-index 2
+	color #fff
+
+.popupForm4__heading
+	margin 0 0 10px
+
+	@media(min-width desktop)
+		margin-bottom 16px
+
+.popupForm4__form
+	align-self end
+	padding-top 56px
+
+	@media(min-width desktop)
+		padding-top 92px
+
+@media(min-width desktop)
+	.popupForm4__form
+		display grid
+		grid-template-columns 38.54fr 38.54fr 22.92fr
+		grid-column-gap 20px
+		grid-row-gap 20px
+
+	.popupForm4__formBlock:nth-child(odd)
+		grid-column 1/2
+
+	.popupForm4__formBlock:nth-child(even)
+		grid-column 2/3
+
+	.popupForm4__formBlock:last-of-type:nth-child(odd)
+		grid-column 1/3
+
+	.popupForm4__submit
+		grid-column 3/4
+		grid-row 1/-1
+
+.popupForm4__text
+	max-width 496px
+
+.popupForm4__img
+	position absolute
+	left 0
+	top 0
+	object-fit cover
+
+.popupForm4__formBlock
+	display block
+	width 100%
+
+	& + &
+		margin-top 8px
+
+		@media(min-width desktop)
+			margin-top 0
+
+.popupForm4__input
+	display block
+	width 100%
+	padding 8px 0
+	color #fff
+	border none
+	background none
+	border-bottom 1px solid #fff
+
+	@media(min-width desktop)
+		padding 10px 0
+
+	&--error
+		border-color red
+
+	&::placeholder
+		color currentColor
+		opacity .5
+
+.popupForm4__submit
+	margin-top 24px
+	border 1px solid #fff
+	color #fff
+	border-radius 60px
+	transition 0.3s
+	padding 9px 23px
+	cursor pointer
+
+	@media(min-width desktop)
+		margin-top 0
+
+	&:hover
+		background #fff
+		color #000
+
+.popupForm4::before, .popupForm4__img
+	grid-column 1/-1
+	grid-row 1/-1
+	width calc(100% + 48px)
+	max-width calc(100% + 48px)
+	height calc(100% + 56px)
+	margin-left -24px
+	margin-top -28px
+
+	@media(min-width desktop)
+		height calc(100% + 52px)
+		margin-top -20px
+
+// Успешная отправка.
+.popupForm4__successText
+	display none
+
+	p
+		margin 0
+
+.popupForm4--success
+	display flex
+	align-items center
+	justify-content center
+	padding 0
+
+	&::before
+		display none
+
+	.popupForm4__heading, .popupForm4__text, .popupForm4__form, .popupForm4__img
+		display none
+
+	.popupForm4__successText
+		display block
+		text-align center
+		color #000
+
+	.popupForm4__successTextIcon
+		margin-bottom 16px
+
+		@media(min-width desktop)
+			margin-bottom 24px

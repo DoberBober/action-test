@@ -1,0 +1,76 @@
+.reviews2__desc
+	margin-bottom 40px
+
+.reviews2__item
+	border-top 1px solid mainText
+	padding-top 12px
+	width 310px
+	@media(min-width desktop)
+		width 100%
+		padding-top 16px
+		display grid
+		grid-template-columns 44.67% 48%
+		grid-gap 88px
+
+	& + &
+		margin-left 20px
+
+.reviews2__info
+	display flex
+	margin-top 24px
+	@media(min-width desktop)
+		margin-top 0
+		padding-top 4px
+		grid-column 1/2
+		grid-row 1/2
+
+.reviews2__avatar
+	width 42px
+	height 42px
+	flex-shrink 0
+	margin-right 12px
+	@media(min-width desktop)
+		width 104px
+		height 104px
+		margin-right 16px
+
+.reviews2__photo, .reviews2__video
+	display block
+	width 100%
+	height 100%
+	object-fit cover
+
+.reviews2__post
+	margin-top 2px
+	@media(min-width desktop)
+		margin-top 4px
+
+.reviews2__text
+	@media(min-width desktop)
+		grid-column 2/3
+		grid-row 1/2
+
+
+.reviews2__item--withoutImg
+	.reviews2__avatar
+		display none
+
+.reviews2__text, .reviews2__name, .reviews2__post
+	color mainText
+
+.section--third.reviews2
+	.reviews2__text, .reviews2__name, .reviews2__post
+		color main3Text
+
+	.reviews2__item
+		border-top-color main3Text
+
+@media(max-width desktop - 1px)
+	.reviews2
+		.flickity-prev-next-button
+			display none
+
+@media(min-width desktop)
+	.reviews2
+		.slider-custom-dots
+			display none

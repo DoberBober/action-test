@@ -1,0 +1,55 @@
+-
+	 var title = 'Делитесь фотографиями'
+-
+	 var desc = [
+				'Отмечай @adidasrussia на фотографиях в Instagram, чтобы попасть в нашу подборку.',
+				'Тестовый параграф'
+			]
+-
+	 var list = [
+					{
+						'img': 'instagram-1.jpg',
+						'link': 'https://instagram.com',
+						'username': 'PAULINAVEGADIEP'
+					},
+					{
+						'img': 'instagram-2.jpg',
+						'link': 'https://instagram.com',
+						'username': 'NIKOLAEVA_NATALIA'
+					},
+					{
+						'img': 'instagram-3.jpg',
+						'link': 'https://instagram.com',
+						'username': 'ROSE_VON_LOEW'
+					},
+					{
+						'img': 'instagram-2.jpg',
+						'link': 'https://instagram.com',
+						'username': 'NIKOLAEVA_NATALIA'
+					},
+					{
+						'img': 'instagram-1.jpg',
+						'link': 'https://instagram.com',
+						'username': 'PAULINAVEGADIEP'
+					},
+				]
+
+- var className = 'section instagram'
+if extraClass
+	- className = 'section instagram instagram--' + extraClass
+
+
+section(class=className)#instagram
+	.container.instagram__container
+		h2.instagram__heading.heading !{title}
+
+		if desc
+			.instagram__desc.text
+				each paragraph in desc
+					p= paragraph
+
+		.instagram__list
+			each item in list
+				.instagram__item
+					img(src="./images/" + item['img'], alt=item['username'], width="278", height="278").instagram__photo
+					a(href="#").instagram__link !{item['username']}

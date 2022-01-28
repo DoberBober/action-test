@@ -1,0 +1,110 @@
+.cta2__wrapper
+	display grid
+	grid-template-rows min-content minmax(180px, min-content) min-content
+
+	@media(min-width desktop)
+		grid-template-rows min-content minmax(316px, min-content) min-content
+
+.cta2__heading
+	grid-row 1/2
+
+.cta2__desc
+	grid-row 2/3
+
+	@media(min-width desktop)
+		align-self end
+
+.cta2__form
+	grid-row 3/4
+
+.cta2__container
+	position relative
+	min-height 485px
+	padding 60px 20px
+	max-width 1200px
+
+	@media(min-width desktop)
+		min-height 504px
+		padding 48px 40px
+
+	&::after
+		content ''
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height 100%
+		background linear-gradient(180deg, rgba(0, 0, 0, 0) 62.33%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+
+.cta2__img, .cta2__video
+	position absolute
+	left 0
+	top 0
+	width 100%
+	height 100%
+	object-fit cover
+
+.cta2__wrapper
+	position relative
+	z-index 1
+
+.cta2__heading, .cta2__desc, .cta2__input, .cta2__input::placeholder, .cta2__submit
+	color #fff !important
+
+.cta2__heading
+	margin 0
+
+.cta2__desc
+	margin 0 0 0 auto
+	padding 40px 0 32px
+	width 258px
+
+	@media(min-width desktop)
+		width 556px
+		padding-bottom 40px
+
+.cta2__form
+	width 258px
+	margin-left auto
+
+	@media(min-width desktop)
+		display flex
+		width 556px
+
+.cta2__inputWrapper
+	display block
+	width 100%
+
+.cta2__input
+	border none
+	border-bottom 1px solid currentColor
+	display block
+	width 100%
+	padding 8px 0
+
+	@media(min-width desktop)
+		padding 10px 0
+
+	&::placeholder
+		opacity 1
+
+	&--error
+		border-bottom-color red
+
+.cta2__submit
+	border 1px solid #fff
+	margin-top 24px
+	flex-shrink 0
+	border-radius 60px
+	padding 9px 23px
+	cursor pointer
+	transition 0.3s
+
+	@media(min-width desktop)
+		margin-top 0
+		margin-left 12px
+		max-width 50%
+
+	&:hover
+		background #fff
+		color #000 !important

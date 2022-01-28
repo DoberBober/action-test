@@ -1,0 +1,1 @@
+function gallery3Init() {}

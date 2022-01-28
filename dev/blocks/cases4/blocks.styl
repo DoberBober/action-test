@@ -1,0 +1,73 @@
+.cases4__item
+	width 100%
+	@media(min-width tablet)
+		width calc((100% - 16px) / 2)
+		margin-left 16px
+	@media(min-width desktop)
+		width calc((100% - 48px) / 2)
+		margin-left 48px
+
+.cases4__title
+	margin 0
+	padding 0 0 4px
+	border-bottom 1px solid #000
+	@media(min-width tablet) and (max-width upToDesktop)
+		padding-top 16px
+		border-top 1px solid #000
+		border-bottom none
+		padding-bottom 0
+	@media(min-width desktop)
+		padding-bottom 8px
+
+.cases4__desc
+	margin-top 12px
+	@media(min-width desktop)
+		margin-top 20px
+
+.cases4__points
+	margin 20px 0 0
+	padding 0
+	list-style none
+	@media(min-width tablet)
+		margin-top 24px
+
+.cases4__pointsItem
+	position relative
+	padding-left 11px
+	@media(min-width desktop)
+		padding-left 13px
+
+	& + &
+		margin-top 12px
+
+	&::before
+		content ''
+		width 3px
+		height 3px
+		background currentColor
+		border-radius 100%
+		position absolute
+		left 0
+		top 6px
+		@media(min-width desktop)
+			width 5px
+			height 5px
+
+.cases4__link
+	margin-top 24px
+	display table
+	border-radius 60px
+	text-decoration none
+	border 1px solid currentColor
+	padding 9px 29px
+
+	@media(min-width desktop)
+		margin-top 40px
+		padding-left 23px
+		padding-right 23px
+		transition 0.3s
+
+		&:hover
+			background mainText
+			border-color mainText
+			color main

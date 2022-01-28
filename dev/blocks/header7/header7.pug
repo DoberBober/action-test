@@ -1,0 +1,45 @@
+- var logo = false
+- var sticky = false
+- var animated = false
+- var menu = ['Pricing', 'Reviews', 'Portfolio', 'Pricing', 'Reviews', 'Portfolio']
+
+- var headerClassNames = 'header7'
+
+if sticky
+	- headerClassNames = headerClassNames + ' headerSticky'
+
+if animated
+	- headerClassNames = headerClassNames + ' headerAnimate'
+
+section(class=headerClassNames)#header7
+	.container.header7__container
+		.header7__firstPartMenu.onlyDesktop.mainMenu7__list.mainMenu7__list--firstPart
+			each item in menu
+				li.mainMenu7__item
+					a(href="#").mainMenu7__link !{item}
+
+		if logo
+			a(href="#").header7__logo
+				img(src="https://via.placeholder.com/500x500", alt="Название компании")
+		else
+			a(href="#").header7__logo Рога и Копыта
+
+		nav.header7__nav.mainMenu7
+			.mainMenu7__header.onlyMobile
+				if logo
+					a(href="#").mainMenu7__logo
+						img(src="https://via.placeholder.com/500x500", alt="Название компании")
+						img(src="" + logo, alt="Название компании").hidden
+				else
+					a(href="#").mainMenu7__logo Рога и Копыта
+
+				button(type="button" aria-label="Закрыть меню").header7__menuChecker.header7__menuChecker--close
+					.header7__menuCheckerLine
+
+			ul.mainMenu7__list
+				each item in menu
+					li.mainMenu7__item
+						a(href="#").mainMenu7__link !{item}
+
+		button(type="button" aria-label="Открыть меню").header7__menuChecker.header7__menuChecker--open.onlyMobile
+			.header7__menuCheckerLine

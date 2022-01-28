@@ -1,0 +1,131 @@
+-
+	 var title = 'Услуги'
+-
+	 var desc = [
+				'Skillbox — это онлайн-университет. У нас прикладные курсы и программы от главных экспертов рынка, актуальные подходы к обучению, работа над реальными проектами, стажировки и трудоустройство в крупнейшие компании страны.',
+				'Тестовый параграф'
+			]
+-
+	 var services = [
+				'Лечение зубов', 'Протезирование зубов', 'Имплантация металлических зубов'
+			]
+-
+	 var list = [
+				{
+					'type': 'Лечение зубов',
+					'name': 'Операция постановка (винтового) имплантата системы Straumann I этап',
+					'desc': 'У нас собственная высокотехнологичная лаборатория, это позволяет снизить стоимость изготовления коронок и протезов.',
+					'price': '111 руб.'
+				},
+				{
+					'type': 'Лечение зубов',
+					'name': 'Удаление кариеса',
+					'desc': 'У нас собственная высокотехнологичная лаборатория, это позволяет снизить стоимость изготовления коронок и протезов.',
+					'price': '111 руб.'
+				},
+				{
+					'type': 'Лечение зубов',
+					'name': 'Операция постановка (винтового) имплантата системы Straumann I этап',
+					'desc': 'У нас собственная высокотехнологичная лаборатория, это позволяет снизить стоимость изготовления коронок и протезов.',
+					'price': '111 руб.'
+				},
+				{
+					'type': 'Лечение зубов',
+					'name': 'Удаление кариеса',
+					'desc': 'У нас собственная высокотехнологичная лаборатория, это позволяет снизить стоимость изготовления коронок и протезов.',
+					'price': '111 руб.'
+				},
+				{
+					'type': 'Лечение зубов',
+					'name': 'Операция постановка (винтового) имплантата системы Straumann I этап',
+					'desc': 'У нас собственная высокотехнологичная лаборатория, это позволяет снизить стоимость изготовления коронок и протезов.',
+					'price': '111 руб.'
+				},
+				{
+					'type': 'Лечение зубов',
+					'name': 'Удаление кариеса',
+					'desc': 'У нас собственная высокотехнологичная лаборатория, это позволяет снизить стоимость изготовления коронок и протезов.',
+					'price': '111 руб.'
+				},
+				{
+					'type': 'Протезирование зубов',
+					'name': 'Операция постановка (винтового) имплантата системы Straumann I этап 2',
+					'desc': 'У нас собственная высокотехнологичная лаборатория, это позволяет снизить стоимость изготовления коронок и протезов.',
+					'price': '222 руб.'
+				},
+				{
+					'type': 'Протезирование зубов',
+					'name': 'Операция постановка (винтового) 2',
+					'desc': 'У нас собственная высокотехнологичная лаборатория, это позволяет снизить стоимость изготовления коронок и протезов.',
+					'price': '222 руб.'
+				},
+				{
+					'type': 'Имплантация металлических зубов',
+					'name': 'Удаление кариеса 3',
+					'desc': 'У нас собственная высокотехнологичная лаборатория, это позволяет снизить стоимость изготовления коронок и протезов.',
+					'price': '333 руб.'
+				}
+			]
+
+
+- var className = 'section services'
+if extraClass
+	- className = 'section services services--' + extraClass
+
+
+
+section(class=className)#services
+	.container.services__container
+		h2.services__heading.heading !{title}
+
+		if desc
+			.services__desc.text
+				each paragraph in desc
+					p= paragraph
+
+		.services__btns
+			button(type="button" data-serviceDirection="Стоматолог").services__btn Стоматолог
+			button(type="button" data-serviceDirection="Офтальмолог").services__btn Офтальмолог
+
+		.services__services
+			.services__dropdown.dropdown.dropdown--service(data-serviceDirection="Стоматолог")
+				span.dropdown__select
+				.dropdown__list
+					each item in services
+						div(value=item + 'стоматолог').dropdown__item !{item} (Стоматолог)
+
+			.services__dropdown.dropdown.dropdown--service(data-serviceDirection="Офтальмолог")
+				span.dropdown__select
+				.dropdown__list
+					each item in services
+						div(value=item + 'офтальмолог').dropdown__item !{item} (Офтальмолог)
+
+			select.services__select.hide(data-serviceDirection="Стоматолог")
+				each item in services
+						option(value=item + 'стоматолог') !{item} (Стоматолог)
+
+			select.services__select.hide(data-serviceDirection="Офтальмолог")
+				each item in services
+						option(value=item + 'офтальмолог') !{item} (Офтальмолог)
+
+			.services__filter
+				each item in services
+					h3.services__filterName(data-serviceDirection="Стоматолог")
+						button(type="button" data-serviceType=item + 'стоматолог').services__filterBtn !{item} (Стоматолог)
+
+				each item in services
+					h3.services__filterName(data-serviceDirection="Офтальмолог")
+						button(type="button" data-serviceType=item + 'офтальмолог').services__filterBtn !{item} (Офтальмолог)
+
+			.services__list
+				each item in list
+					.services__item.services__item--slide(data-serviceType=item['type'] + 'стоматолог' data-serviceDirection="Стоматолог")
+						h4.services__name !{item['name']} (Стоматолог)
+						.services__price !{item['price']}
+						.services__text !{item['desc']}
+
+				each item in list
+					.services__item.services__item--slide(data-serviceType=item['type'] + 'офтальмолог' data-serviceDirection="Офтальмолог")
+						h4.services__name !{item['name']} (Офтальмолог)
+						.services__price !{item['price']}
+						.services__text !{item['desc']}

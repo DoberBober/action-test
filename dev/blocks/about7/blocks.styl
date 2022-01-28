@@ -1,0 +1,82 @@
+@media(min-width desktop)
+	.about7__container
+		display grid
+		grid-template-columns 1fr 576px
+
+	.about7__heading
+		grid-column 1/3
+
+	.about7__btn, .about7__list
+		grid-column 2/3
+
+	.about7__btn
+		justify-self start
+
+.about7__heading
+	margin-bottom 0
+
+	&::after
+		display none
+
+.about7__list
+	margin-top 28px
+	max-width 576px
+	@media(min-width desktop)
+		margin-top 32px
+
+.about7__listItem
+	color mainText
+	position relative
+	padding-left 20px
+	@media(min-width desktop)
+		padding-left 24px
+
+	svg
+		position absolute
+		left 0
+		top 2px
+		width 12px
+		height 12px
+		color mainText
+		@media(min-width desktop)
+			width 16px
+			height 16px
+			top 3px
+
+	& + &
+		margin-top 16px
+		@media(min-width desktop)
+			margin-top 12px
+
+.about7__btn
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 23px
+	display table
+	transition 0.3s
+	margin-top 40px
+
+	&:hover
+		background mainText
+		color main
+
+.about7__container--withoutList
+	.about7__list
+		display none
+
+	.about7__btn
+		grid-column 1/2
+
+.section--third.about7
+	.about7__listItem, .about7__listItem svg
+		color main3Text
+
+	.about7__btn
+		border 1px solid main3Text
+		color main3Text
+
+		&:hover
+			background main3Text
+			color main3

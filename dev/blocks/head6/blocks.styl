@@ -1,0 +1,45 @@
+.head6
+	position relative
+	background main !important
+	text-align center
+	padding 84px 0 60px
+	@media(min-width desktop)
+		padding 143px 0
+		display flex
+		align-items center
+		// min-height 860px
+		min-height var(--app-height, 100vh)
+
+.head6__heading, .head6__text, .head6__button
+	color mainText !important
+
+.head6__heading
+	margin 0 -5px 12px
+	text-align center
+	@media(min-width desktop)
+		margin 0 -22px 72px
+
+	&:empty
+		margin-bottom 0
+
+.head6__text
+	max-width 280px
+	margin auto auto 0
+	@media(min-width desktop)
+		max-width 472px
+
+.head6__buttons
+	margin 40px auto 0
+
+.head6__button
+	display table
+	padding 9px 23px
+	border 1px solid currentColor
+	border-radius 60px
+	text-decoration none
+	transition 0.3s
+	margin 0 auto
+
+	&:hover
+		background mainText
+		color main !important

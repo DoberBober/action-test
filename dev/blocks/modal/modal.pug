@@ -1,0 +1,33 @@
+.modalOverlay
+.modal
+	button(type="button" aria-label="Закрыть модальное окно").modal__close
+		include ../../assets/style-X/modal-close.svg
+
+	// Разметка модалки для новости.
+	// .modal__content.modal__content--news
+	// 	.modal__image
+	// 		img(src="./images/modal.jpg", alt="")
+	// 	.modal__info
+	// 		h2.modal__heading Смарт-часы Samsung Galaxy Watch Active2 SM-R830 Ванильные с длинными линзами против солнца
+	// 		.modal__desc
+	// 			p Глубокое освещение. Зелёные, красные и инфракрасные светодиоды излучают свет на кровеносные сосуды в области запястья, а фотодиоды измеряют интенсивность отражённых лучей. Затем в дело вступают инновационные алгоритмы. Они вычисляют цвет крови, по которому определяют уровень её насыщения кислородом.
+
+	// Разметка модалки для товара.
+	.modal__content
+		.modal__image
+			img(src="./images/modal.jpg", alt="")
+		.modal__info
+			h2.modal__heading Смарт-часы Samsung Galaxy Watch Active2 SM-R830 Ванильные с длинными линзами против солнца
+
+			.modal__prices
+				.modal__price 10 000 200
+					i.ruble
+				.modal__olpPrice 12 000 200
+					i.ruble.ruble--oldPrice
+
+			a(href="#").modal__link Заказать
+				include ../../assets/style-X/modal-link.svg
+
+			.modal__desc
+				h3 Описание
+				p Глубокое освещение. Зелёные, красные и инфракрасные светодиоды излучают свет на кровеносные сосуды в области запястья, а фотодиоды измеряют интенсивность отражённых лучей. Затем в дело вступают инновационные алгоритмы. Они вычисляют цвет крови, по которому определяют уровень её насыщения кислородом.

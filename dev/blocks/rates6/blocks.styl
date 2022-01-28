@@ -1,0 +1,87 @@
+.rates6__tabs
+	margin-top 40px
+	display flex
+
+	@media(min-width desktop)
+		margin-top 100px
+
+.rates6__tab
+	border-radius 40px
+	border 1px solid currentColor
+	padding 3px 9px
+	transition 0.3s
+	opacity 0.5
+	cursor pointer
+
+	@media(min-width desktop)
+		border-radius 50px
+
+	& + &
+		margin-left 12px
+
+	&--active
+		opacity 1
+
+.rates6__list
+	margin-top 28px
+	margin-bottom -48px
+
+	@media(min-width desktop)
+		margin-top 40px
+		margin-bottom 0
+
+		&:not(.flickity-enabled)
+			display flex
+			margin-right -48px
+
+		&::after
+			content 'flickity'
+			display none
+
+.rates6__item
+	margin-bottom 48px
+
+	@media(min-width desktop)
+		margin-bottom 0
+		width calc((100% - 96px) / 3)
+		margin-right 48px
+
+.rates6__wrapper
+	padding 16px
+	background #F3F3F3
+
+	@media(min-width desktop)
+		padding 20px 20px 16px
+
+.rates6__itemHeading
+	margin 0
+
+.rates6__itemDesc
+	margin-top 10px
+
+	@media(min-width desktop)
+		margin-top 12px
+
+.rates6__itemPrice
+	margin-top 72px
+
+	@media(min-width desktop)
+		margin-top 64px
+
+.rates6__itemLink
+	display table
+	margin-top 16px
+	border 1px solid currentColor
+	border-radius 60px
+	text-decoration none
+	padding 9px 22px
+	transition 0.3s
+	color mainText
+
+	@media(min-width desktop)
+		margin-top 20px
+		padding 9px 23px
+
+	&:hover
+		background mainText
+		color main

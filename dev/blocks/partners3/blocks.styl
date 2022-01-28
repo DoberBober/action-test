@@ -1,0 +1,47 @@
+.partners3__item
+	border-top 1px solid mainText
+	padding 16px 0 48px
+	@media(min-width desktop)
+		padding-bottom 60px
+		display grid
+		grid-template-columns 208px 576px
+		justify-content space-between
+
+.partners3__itemLogoWrapper
+	margin 0 0 28px
+	@media(min-width desktop)
+		margin 0
+		grid-column 1/2
+
+.partners3__logo, .partners3__video
+	display block
+	width 96px
+	min-height 26px
+	object-fit contain
+	object-position left bottom
+	@media(min-width desktop)
+		margin-top 2px
+		width 208px
+		min-height 56px
+
+.partners3__itemTexts
+	@media(min-width desktop)
+		grid-column 2/3
+
+.partners3__itemHeading
+	margin 0 0 12px
+	@media(min-width desktop)
+		margin 4px 0 16px
+
+	&:empty
+		display none
+
+.partners3__itemText
+	@media(min-width desktop)
+		max-width 416px
+
+.partners3.section--third
+	.partners3__item
+		border-top-color main3Text
+	.partners3__itemText
+		color main3Text

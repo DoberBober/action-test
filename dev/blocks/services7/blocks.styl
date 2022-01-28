@@ -1,0 +1,137 @@
+@media(min-width desktop)
+	.services7__container
+		display grid
+		grid-template-columns 26% 1fr 26%
+		grid-template-rows min-content min-content min-content min-content
+		grid-column-gap 40px
+
+	.services7__heading
+		grid-column 1/-1
+		grid-row 1/2
+
+	.services7__desc
+		grid-column 1/-1
+		grid-row 2/3
+		margin-bottom 40px
+
+	.services7__link
+		grid-column 1/-1
+		grid-row 3/4
+		justify-self start
+
+	.services7__list
+		grid-column 1/-1
+		grid-row 4/5
+
+	.services7__img
+		grid-column 2/3
+		grid-row 4/5
+
+.services7__list
+	margin-top 48px
+	@media(min-width desktop)
+		margin-top 0
+		column-count 2
+		column-gap 48%
+
+.services7__img
+	display block
+	object-fit cover
+	width 100%
+	height 196px
+	@media(min-width desktop)
+		height 372px
+
+.services7__item
+	border-top 1px solid mainText
+	padding-top 16px
+	padding-bottom 28px
+	@media(min-width desktop)
+		padding-bottom 32px
+		break-inside avoid
+
+.services7__itemName
+	color mainText
+	margin 0
+	padding-top 40px
+	position relative
+	@media(min-width desktop)
+		padding-top 44px
+
+.services7__itemIcon
+	width 24px
+	height 24px
+	position absolute
+	left 0
+	top 0
+	border-radius 100%
+	border 1px solid currentColor
+	display flex
+	align-items center
+	justify-content center
+
+.services7__itemDesc
+	color mainText
+	margin-top 8px
+	@media(min-width desktop)
+		margin-top 12px
+
+.services7__item
+	&:nth-child(n+5)
+		display none
+
+	@media(min-width desktop)
+		&:nth-child(even)
+			grid-column 3/4
+
+.services7__link
+	display table
+	padding 7px 14px
+	color mainText
+	background main
+	border 1px solid mainText
+	margin-top 8px
+	border-radius 60px
+	transition 0.3s
+	text-decoration none
+	@media(min-width desktop)
+		margin-top 0
+		margin-bottom 100px
+
+	&:hover
+		background mainText
+		color main
+
+@media(min-width desktop)
+	.services7--withoutImg
+		.services7__list
+			column-count initial
+			column-gap initial
+			display flex
+			flex-wrap wrap
+
+		.services7__item
+			width calc((100% - 96px) / 3)
+			margin-left 48px
+
+			&:nth-child(3n+1)
+				margin-left 0
+
+			&:nth-child(4)
+				margin-top 16px
+
+.services7.section--third
+	.services7__item
+		border-top-color main3Text
+
+	.services7__itemName, .services7__itemDesc
+		color main3Text
+
+	.services7__link
+		border-color main3Text
+		background main3
+		color main3Text
+
+		&:hover
+			background main3Text
+			color main3

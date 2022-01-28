@@ -1,0 +1,74 @@
+.overlay
+	position fixed
+	left 0
+	top 0
+	width 100vw
+	height 100vh
+	background rgba(0, 0, 0, 0.8)
+	visibility hidden
+	z-index 100
+
+	&--visible
+		visibility visible
+
+.popUp
+	position fixed
+	left 0
+	bottom 0
+	width 100%
+	background #fff
+	color #000
+	padding 48px
+	z-index 101
+	text-align center
+	display none
+
+	@media(min-width desktop)
+		padding 72px
+		width 464px
+		left 50%
+		top 50%
+		bottom initial
+		transform translate(-50%, -50%)
+
+	&--visible
+		display block
+
+.popUp__content
+	max-width 312px
+	margin 0 auto
+
+	@media(min-width desktop)
+		max-width 100%
+
+.popUp__title
+	margin-top 16px
+
+	@media(min-width desktop)
+		margin-top 24px
+
+.popUp__close
+	width 32px
+	height 32px
+	border-radius 100%
+	align-items center
+	justify-content center
+	cursor pointer
+	border none
+	display none
+	position fixed
+	right 16px
+	top 16px
+	z-index 101
+	background #fff
+	transition 0.3s
+
+	@media(min-width desktop)
+		width 48px
+		height 48px
+
+	&:hover
+		opacity 0.5
+
+	&--visible
+		display flex

@@ -1,0 +1,123 @@
+.popupForm3
+	width 100vw
+	height calc(100vh - 64px)
+	padding 28px 24px
+	background main
+	color mainText
+	position fixed
+	left 0
+	bottom 0
+
+	@media(min-width desktop)
+		width 512px
+		height 100vh
+		padding 20px 24px 32px
+
+@media(max-width desktop - 1px)
+	.popupForm3
+		display grid
+		grid-template-columns 1fr 312px 1fr
+		grid-template-rows min-content min-content 1fr
+
+	.popupForm3__heading, .popupForm3__text, .popupForm3__form, .popupForm3__successText, .popupForm3__img
+		grid-column 2/3
+
+@media(min-width desktop)
+	.popupForm3
+		display grid
+		grid-template-rows min-content min-content 1fr
+
+.popupForm3__heading
+	margin 0 0 10px
+
+	@media(min-width desktop)
+		margin-bottom 16px
+
+.popupForm3__form
+	align-self end
+	max-width 368px
+
+.popupForm3__text
+	max-width 368px
+
+.popupForm3__img
+	display block
+	object-fit cover
+	width 100%
+	height 194px
+	margin-top 32px
+	margin-bottom 14px
+
+	@media(min-width desktop)
+		margin-top 40px
+		height 291px
+
+.popupForm3__formBlock
+	display block
+	width 100%
+
+	& + &
+		margin-top 8px
+
+		@media(min-width desktop)
+			margin-top 10px
+
+.popupForm3__input
+	display block
+	width 100%
+	padding 8px 0
+	color mainText
+	border none
+	background none
+	border-bottom 1px solid mainText
+
+	@media(min-width desktop)
+		padding 10px 0
+
+	&--error
+		border-color red
+
+	&::placeholder
+		color currentColor
+		opacity .5
+
+.popupForm3__submit
+	margin-top 24px
+	border 1px solid mainText
+	border-radius 60px
+	transition 0.3s
+	padding 9px 23px
+	cursor pointer
+
+	@media(min-width desktop)
+		margin-top 40px
+
+	&:hover
+		background mainText
+		color main
+
+// Успешная отправка.
+.popupForm3__successText
+	display none
+
+	p
+		margin 0
+
+.popupForm3--success
+	display flex
+	align-items center
+	justify-content center
+	padding 0
+
+	.popupForm3__heading, .popupForm3__text, .popupForm3__form, .popupForm3__img
+		display none
+
+	.popupForm3__successText
+		display block
+		text-align center
+
+	.popupForm3__successTextIcon
+		margin-bottom 16px
+
+		@media(min-width desktop)
+			margin-bottom 24px

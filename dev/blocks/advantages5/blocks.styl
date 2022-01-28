@@ -1,0 +1,58 @@
+.advantages5__item
+	border-top 1px solid currentColor
+	padding-top 16px
+
+	@media(min-width tablet)
+		display grid
+		grid-template-columns 212px 1fr
+		grid-column-gap 131px
+
+	@media(min-width desktop)
+		padding-top 20px
+		grid-template-columns 368px 1fr
+		grid-column-gap 50px
+
+	& + &
+		margin-top 24px
+
+		@media(min-width tablet)
+			margin-top 40px
+
+		@media(min-width desktop)
+			margin-top 60px
+
+.advantages5__name
+	margin 0 0 12px
+
+	@media(min-width tablet)
+		margin-bottom 0
+
+	@media(min-width desktop)
+		grid-column 1/2
+
+.advantages5__text
+	margin 0
+
+	@media(min-width desktop)
+		grid-column 2/3
+		max-width 367px
+
+.advantages5__link
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 25px
+	display table
+	transition 0.3s
+	margin-top 24px
+
+	@media(min-width tablet)
+		margin-top 48px
+
+	@media(min-width desktop)
+		margin-top 60px
+
+	&:hover
+		background mainText
+		color main

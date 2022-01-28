@@ -1,0 +1,32 @@
+mixin meta(title)
+	- var default_title = 'title'
+	if title
+		- var default_title = title
+
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+		meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+		title !{default_title}
+		//-
+		link(href="css/global.css" rel="stylesheet")
+		// Search Engine
+		meta(name="description" content="___SiteDescription___")
+		meta(name="image" content="logo.svg")
+		meta(name="author" content="___authorName___")
+		// Twitter
+		meta(name="twitter:card" content="summary")
+		meta(name="twitter:title" content="___SiteName___")
+		meta(name="twitter:description" content="___SiteDescription___")
+		meta(name="twitter:image:src" content="logo.svg")
+		// Open Graph general (Facebook Pinterest & Google+)
+		meta(name="og:title" content="___SiteName___")
+		meta(name="og:description" content="___SiteDescription___")
+		meta(name="og:image" content="logo.svg")
+		meta(name="og:url" content="___example.ru___")
+		meta(name="og:site_name" content="___SiteName___")
+		meta(name="og:locale" content="ru_RU")
+		meta(name="og:type" content="website")
+		// FAVICON FOR EVERYBODY, FREE, AND LET NO ONE BE LEFT BEHIND!
+		// Favicons will be here.

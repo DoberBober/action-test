@@ -1,0 +1,60 @@
+.advantages__list
+	@media(min-width tablet)
+		margin-bottom -40px
+		display flex
+		flex-wrap wrap
+
+	@media(min-width desktop)
+		margin-bottom -60px
+
+.advantages__item
+	margin-bottom 24px
+
+	@media(min-width tablet)
+		margin-bottom 40px
+		width calc((100% - 32px) / 2)
+		margin-left 32px
+
+	@media(min-width tablet)
+		&:nth-child(odd)
+			margin-left 0
+
+	@media(min-width desktop)
+		margin-bottom 60px
+		width calc((100% - 50px) / 2)
+		margin-left 50px
+
+.advantages__text
+	@media(min-width desktop)
+		max-width 368px
+
+.advantages__name
+	margin 0 0 12px
+	border-bottom 1px solid currentColor
+	padding-bottom 4px
+
+	@media(min-width tablet)
+		padding-bottom 8px
+
+	@media(min-width desktop)
+		margin-bottom 20px
+
+.advantages__link
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 25px
+	display table
+	transition 0.3s
+	margin-top 24px
+
+	@media(min-width tablet)
+		margin-top 48px
+
+	@media(min-width desktop)
+		margin-top 60px
+
+	&:hover
+		background mainText
+		color main

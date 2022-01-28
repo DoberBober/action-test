@@ -1,0 +1,119 @@
+-
+	 var title = 'Closed events for students'
+-
+	 var desc = [
+				'Join the professional community, you can ask any question to specialists and make new useful contacts. Skillbox is an online university'
+			]
+-
+	 var list = [
+					{
+						'type': 'month',
+						'name': 'Fast start',
+						'price': 'от 3 000',
+						'priceInfo': 'Кредитная карта не требуется',
+						'desc': 'Before incorporating visual aids into speeches, the speaker should understand',
+						'cta': 'Записаться на курс',
+						'list': [
+							'Неограниченное количество проектов', 'Неограниченное количество страниц'
+						]
+					},
+					{
+						'type': 'month',
+						'name': 'Marketing',
+						'price': 'от 6 000',
+						'priceInfo': 'Join the professional community',
+						'desc': 'Before incorporating visual aids into speeches, the speaker should understand',
+						'cta': 'Записаться на курс',
+						'list': [
+							'Неограниченное количество проектов', 'Неограниченное количество страниц', 'Безлимитные домены', 'Частные проекты'
+						]
+					},
+					{
+						'type': 'month',
+						'name': 'Продвинутый',
+						'price': 'от 10 000',
+						'priceInfo': 'Кредитная карта не требуется',
+						'desc': 'Before incorporating visual aids into speeches, the speaker should understand',
+						'cta': 'Записаться на курс',
+						'list': [
+							'Неограниченное количество проектов', 'Неограниченное количество страниц', 'Безлимитные домены', 'Частные проекты', 'Гугл Аналитика'
+						]
+					},
+					{
+						'type': 'year',
+						'name': 'Marketing+',
+						'price': 'от 6 000',
+						'priceInfo': 'Join the professional community',
+						'desc': 'Before incorporating visual aids into speeches, the speaker should understand',
+						'cta': 'Записаться на курс',
+						'list': [
+							'Неограниченное количество проектов', 'Неограниченное количество страниц', 'Безлимитные домены', 'Частные проекты'
+						]
+					},
+					{
+						'type': 'year',
+						'name': 'Marketing+',
+						'price': 'от 6 000',
+						'priceInfo': 'Join the professional community',
+						'desc': 'Before incorporating visual aids into speeches, the speaker should understand',
+						'cta': 'Записаться на курс',
+						'list': [
+							'Неограниченное количество проектов', 'Неограниченное количество страниц', 'Безлимитные домены', 'Частные проекты'
+						]
+					},
+					{
+						'type': 'year',
+						'name': 'Продвинутый+',
+						'price': 'от 10 000',
+						'priceInfo': 'Кредитная карта не требуется',
+						'desc': 'Before incorporating visual aids into speeches, the speaker should understand',
+						'cta': 'Записаться на курс',
+						'list': [
+							'Неограниченное количество проектов', 'Неограниченное количество страниц', 'Безлимитные домены', 'Частные проекты', 'Гугл Аналитика'
+						]
+					},
+					{
+						'type': 'year',
+						'name': 'Fast start+',
+						'price': 'от 3 000',
+						'priceInfo': 'Кредитная карта не требуется',
+						'desc': 'Before incorporating visual aids into speeches, the speaker should understand',
+						'cta': 'Записаться на курс',
+						'list': [
+							'Неограниченное количество проектов', 'Неограниченное количество страниц'
+						]
+					},
+				]
+- var className = 'section rates'
+if extraClass
+	- className = 'section rates rates--' + extraClass
+
+
+
+section(class=className)#rates
+	.container.rates__container
+		h2.rates__heading.heading !{title}
+
+		if desc
+			.rates__desc.text
+				each paragraph in desc
+					p= paragraph
+
+		.rates__checkers
+			button(type="button" data-rateType='month').rates__checker Месяц
+			button(type="button" data-rateType='year').rates__checker Год
+
+		.rates__list
+			each item in list
+				.rates__item.rates__item--slide(data-rateType=item['type'])
+					.rates__mainInfo
+						.rates__name !{item['name']}
+						.rates__price !{item['price']}
+							i.ruble
+						.rates__priceInfo !{item['priceInfo']}
+						.rates__info !{item['desc']}
+					.rates__wrapper
+						a(href="#").rates__btn !{item['cta']}
+						ul.rates__points
+							each point in item['list']
+								li= point

@@ -1,0 +1,74 @@
+.advantages6__list
+	counter-reset advantages6
+
+	@media(min-width tablet)
+		margin-bottom -40px
+		display flex
+		flex-wrap wrap
+
+	@media(min-width desktop)
+		margin-bottom -60px
+
+.advantages6__item
+	margin-bottom 28px
+	display grid
+	grid-template-rows max-content min-content min-content
+	counter-increment advantages6
+
+	@media(min-width tablet) and (max-width desktop - 1px)
+		margin-bottom 40px
+		width calc((100% - 30px) / 2)
+		margin-left 30px
+
+		&:nth-child(odd)
+			margin-left 0
+
+	@media(min-width desktop)
+		margin-bottom 60px
+		width calc((100% - 100px) / 3)
+		margin-left 50px
+
+		&:nth-child(3n+1)
+			margin-left 0
+
+	&::before
+		content counter(advantages6)
+		display flex
+		align-items center
+		justify-content center
+		width 24px
+		height 24px
+		color currentColor
+		border 1px solid currentColor
+		border-radius 100%
+		margin-bottom 16px
+
+		@media(min-width desktop)
+			margin-bottom 20px
+
+.advantages6__name
+	margin 0 0 12px
+
+.advantages6__text
+	margin 0
+	grid-row 3/4
+
+.advantages6__link
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 25px
+	display table
+	transition 0.3s
+	margin-top 24px
+
+	@media(min-width tablet)
+		margin-top 48px
+
+	@media(min-width desktop)
+		margin-top 60px
+
+	&:hover
+		background mainText
+		color main

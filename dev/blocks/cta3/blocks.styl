@@ -1,0 +1,88 @@
+.cta3__wrapper
+	@media(min-width desktop)
+		display grid
+		grid-template-columns 1fr 1fr
+		grid-column-gap 48px
+
+.cta3__img, .cta3__video
+	@media(min-width desktop)
+		margin-bottom 32px
+
+.cta3__img
+	display block
+
+.cta3__heading
+	margin 20px 0 0
+
+	@media(min-width desktop)
+		margin-top 0
+		grid-column 1/2
+		grid-row 1/3
+
+.cta3__desc
+	margin-top 12px
+
+	@media(min-width desktop)
+		margin-top 0
+		max-width 472px
+		grid-column 2/3
+
+.cta3__form
+	margin-top 28px
+
+	@media(min-width desktop)
+		margin-top 48px
+		grid-column 2/3
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+
+.cta3__desc:empty + .cta3__form
+	@media(min-width desktop)
+		margin-top 0
+
+.cta3__inputWrapper
+	display block
+	width 100%
+
+	@media(min-width desktop)
+		width calc((100% - 20px) / 2)
+
+		&:nth-child(odd):last-of-type
+			width 100%
+
+	& + &
+		margin-top 8px
+
+		@media(min-width desktop)
+			margin-top 0
+			margin-bottom 20px
+
+.cta3__input
+	display block
+	width 100%
+	padding 12px 0
+	border none
+	border-bottom 1px solid currentColor
+
+	@media(min-width desktop)
+		padding 8px 0
+
+	&--error
+		border-bottom-color red
+
+.cta3__submit
+	margin-top 24px
+	flex-shrink 0
+	border-radius 60px
+	padding 9px 23px
+	cursor pointer
+	transition 0.3s
+	border 1px solid mainText
+
+	@media(min-width desktop)
+		margin-top 20px
+
+	&:hover
+		background mainText
+		color main

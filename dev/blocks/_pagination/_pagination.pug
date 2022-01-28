@@ -1,0 +1,11 @@
+mixin pagination(extraClass)
+	- var className = 'pagination'
+	if extraClass
+		- className = 'pagination ' + extraClass
+
+	div(class=className)
+		ul.pagination__list
+			li.pagination__item.pagination__item--prev.hidden
+				a(href="#" aria-label="Перейти на предыдущую страницу").pagination__link
+			li.pagination__item.pagination__item--next.pagination__item--onlyNext
+				a(href="#" aria-label="Перейти на следующую страницу").pagination__link

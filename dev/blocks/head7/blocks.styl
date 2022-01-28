@@ -1,0 +1,85 @@
+.head7
+	padding 76px 0 60px
+	@media(min-width desktop)
+		padding 192px 0 110px
+
+.head7__container
+	display grid
+	grid-template-rows min-content min-content min-content min-content
+	@media(max-width desktop - 1px)
+		max-width 360px
+
+.head7__heading, .head7__text, .head7__button
+	color mainText !important
+
+.head7__heading
+	margin 0 -5px -26px
+	grid-row 1/2
+	position relative
+	z-index 1
+	@media(min-width desktop)
+		margin 0 -22px -26px
+		text-align center
+
+.head7__text
+	margin-top 24px
+	grid-row 3/4
+	@media(min-width desktop)
+		margin-top 0
+		max-width 282px
+
+.head7__buttons
+	margin-top 24px
+	grid-row 4/5
+
+.head7__button
+	display table
+	padding 9px 23px
+	border 1px solid currentColor
+	border-radius 60px
+	text-decoration none
+	transition 0.3s
+
+	&:hover
+		background mainText
+		color main !important
+
+.head7__img, .head7__video
+	display block
+	object-fit cover
+	margin-bottom 24px
+	aspect-ratio 1/1
+	grid-row 2/3
+	@media(min-width desktop)
+		margin-bottom 0
+
+@media(min-width desktop)
+	.head7__container
+		grid-template-columns 1fr 588px 1fr
+		grid-template-rows min-content min-content 200px min-content min-content
+		grid-column-gap 24px
+
+	.head7__heading
+		margin-bottom -100px
+		grid-column 1/4
+		grid-row 1/2
+
+	.head7__text
+		grid-column 3/4
+		grid-row 4/5
+
+	.head7__buttons
+		grid-column 3/4
+		grid-row 5/6
+
+	.head7__img, .head7__video
+		grid-column 2/3
+		grid-row 2/6
+		height 100%
+		width 100%
+		max-width 100%
+		aspect-ratio 1/1
+
+	.head7__heading
+		&.heading--size-3
+			margin-bottom -70px

@@ -1,0 +1,96 @@
+.head4
+	background main
+	padding 64px 0 60px
+	@media(min-width desktop)
+		// min-height var(--app-height, 100vh)
+		padding 140px 0 110px
+
+.head4__container
+	display flex
+	flex-direction column
+	@media(max-width desktop - 1px)
+		max-width 360px
+		display flex
+		flex-direction column
+
+.head4__img, .head4__video
+	display block
+	order -1
+	margin-bottom 32px
+	width 100%
+	object-fit cover
+	aspect-ratio 1/1
+	@media(min-width desktop)
+		margin-bottom 0
+		height 100%
+		min-height 720px
+
+.head4__heading, .head4__heading span, .head4__text, .head4__text p, .head4__button, .head4__info, .head4__infoNumber, .head4__infoDesc
+	color mainText !important
+
+.head4__heading
+	margin 0 -5px 12px
+	@media(min-width desktop)
+		margin 0 -9px 12px
+	@media(min-width fhd)
+		margin-bottom 20px
+
+.head4__buttons
+	margin-top 24px
+	@media(min-width desktop)
+		margin-top 40px
+
+.head4__button
+	display table
+	padding 9px 23px
+	border 1px solid currentColor
+	border-radius 60px
+	text-decoration none
+	transition 0.3s
+
+	&:hover
+		background mainText
+		color main !important
+
+.head4__info
+	border-top 1px solid currentColor
+	margin-top 56px
+	padding-top 12px
+	display grid
+	grid-template-columns 1fr 1fr
+	grid-gap 12px 8px
+	@media(min-width desktop)
+		margin-top 92px
+		padding-top 20px
+		grid-gap 34px 48px
+
+.head4__infoNumber
+	margin-bottom 8px
+	@media(min-width desktop)
+		margin-bottom 12px
+
+.head4__infoDesc
+	max-width 220px
+
+@media(min-width desktop)
+	.head4
+		display flex
+		align-items center
+
+	.head4__container
+		display grid
+		grid-template-columns 1fr 1fr
+		grid-column-gap 48px
+
+	.head4__img, .head4__video
+		grid-column 1/2
+		grid-row 1/6
+
+	.head4__heading, .head4__text, .head4__buttons, .head4__info
+		grid-column 2/3
+
+	.head4__text
+		max-width 472px
+
+	.head4__info
+		grid-row 5/6

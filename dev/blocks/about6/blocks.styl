@@ -1,0 +1,97 @@
+@media(min-width desktop)
+	.about6__container, .about6__textsWrapper
+		display grid
+		grid-template-columns 576px 368px
+		justify-content space-between
+
+	.about6__container
+		grid-template-rows min-content min-content min-content min-content
+
+	.about6__heading, .about6__imgWrapper, .about6__textsWrapper
+		grid-column 1/3
+
+	.about6__btn
+		grid-column 2/3
+		justify-self start
+
+.about6__imgWrapper
+	height 196px
+	margin-bottom 12px
+	@media(min-width desktop)
+		height 675px
+		margin-bottom 20px
+
+.about6__img, .about6__video
+	display block
+	width 100%
+	height 100%
+	object-fit cover
+
+.about6__text
+	color mainText
+	max-width 576px
+
+.about6__list
+	margin-top 24px
+	@media(min-width desktop)
+		margin-top 0
+		padding-top 4px
+
+.about6__listItem
+	color mainText
+	position relative
+	padding-left 20px
+	@media(min-width desktop)
+		padding-left 24px
+
+	svg
+		position absolute
+		left 0
+		top 2px
+		width 12px
+		height 12px
+		color mainText
+		@media(min-width desktop)
+			width 16px
+			height 16px
+			top 1px
+
+	& + &
+		margin-top 12px
+
+.about6__btn
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 23px
+	display table
+	transition 0.3s
+	margin-top 40px
+
+	&:hover
+		background mainText
+		color main
+
+
+.about6__container--withoutImg
+	.about6__imgWrapper
+		display none
+
+.about6__container--withoutText
+	.about6__list
+		grid-column 1/2
+	.about6__btn
+		grid-column 1/2
+
+.section--third.about6
+	.about6__text, .about6__listItem, .about6__listItem svg
+		color main3Text
+
+	.about6__btn
+		border 1px solid main3Text
+		color main3Text
+
+		&:hover
+			background main3Text
+			color main3

@@ -1,0 +1,60 @@
+.services3__list
+	display grid
+	grid-template-columns 1fr
+	grid-gap 40px
+	@media(min-width desktop)
+		grid-template-columns 1fr 1fr
+		grid-column-gap 20px
+		grid-row-gap 40px
+
+.services3__itemImgWrapper
+	aspect-ratio 1.59/1
+	background #F4F4F4
+	background-image url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.0039 15C16.0039 15.7956 15.6878 16.5587 15.1252 17.1213C14.5626 17.6839 13.7996 18 13.0039 18C12.2083 18 11.4452 17.6839 10.8826 17.1213C10.32 16.5587 10.0039 15.7956 10.0039 15C10.0039 14.2044 10.32 13.4413 10.8826 12.8787C11.4452 12.3161 12.2083 12 13.0039 12C13.7996 12 14.5626 12.3161 15.1252 12.8787C15.6878 13.4413 16.0039 14.2044 16.0039 15Z' fill='black'/%3E%3Cpath d='M7 8C6.20435 8 5.44129 8.31607 4.87868 8.87868C4.31607 9.44129 4 10.2044 4 11V29C4 29.7957 4.31607 30.5587 4.87868 31.1213C5.44129 31.6839 6.20435 32 7 32H33C33.7957 32 34.5587 31.6839 35.1213 31.1213C35.6839 30.5587 36 29.7957 36 29V11C36 10.2044 35.6839 9.44129 35.1213 8.87868C34.5587 8.31607 33.7957 8 33 8H7ZM33 10C33.2652 10 33.5196 10.1054 33.7071 10.2929C33.8947 10.4804 34 10.7348 34 11V23L26.45 19.106C26.2625 19.012 26.0501 18.9795 25.843 19.0128C25.6359 19.0462 25.4445 19.1439 25.296 19.292L17.876 26.712L12.556 23.168C12.3639 23.0401 12.1335 22.9826 11.9039 23.0052C11.6742 23.0278 11.4595 23.1291 11.296 23.292L6.004 28V29.08C6.00161 29.0534 6.00028 29.0267 6 29V11C6 10.7348 6.10536 10.4804 6.29289 10.2929C6.48043 10.1054 6.73478 10 7 10H33Z' fill='black'/%3E%3C/svg%3E%0A")
+	background-position center center
+	background-repeat no-repeat
+
+.services3__itemImg
+	display block
+	object-fit cover
+	width 100%
+	height 100%
+
+.services3__itemName
+	margin 16px 0 0
+	color mainText
+	@media(min-width desktop)
+		margin-top 20px
+
+.services3__itemDesc
+	margin-top 8px
+	color mainText
+	max-width 416px
+
+.services3__link
+	display table
+	padding 7px 14px
+	color mainText
+	background main
+	border 1px solid mainText
+	margin-top 40px
+	border-radius 60px
+	transition 0.3s
+	text-decoration none
+
+	&:hover
+		background mainText
+		color main
+
+.services3.section--third
+	.services3__itemName, .services3__itemDesc
+		color main3Text
+
+	.services3__link
+		border-color main3Text
+		background main3
+		color main3Text
+
+		&:hover
+			background main3Text
+			color main3

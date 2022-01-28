@@ -1,0 +1,108 @@
+.cases5__item
+	width 312px
+	margin-right 12px
+	@media(min-width tablet)
+		margin-right 16px
+		width 443px
+		margin-bottom 5px
+	@media(min-width desktop)
+		width 793px
+		margin-right 20px
+		margin-bottom 0
+
+.cases5__imgWrapper
+	position relative
+	margin-bottom 16px
+	overflow hidden
+	@media(min-width desktop)
+		margin-bottom 20px
+
+.cases5__img
+	display block
+	width 100%
+	height 100%
+	object-fit cover
+
+.cases5__title
+	margin 0 0 8px
+	@media(min-width desktop)
+		margin-bottom 12px
+
+.cases5__link
+	text-decoration none
+	border 1px solid currentColor
+	border-radius 60px
+
+	@media(max-width upToDesktop)
+		margin-top 24px
+		display table
+		text-decoration none
+		padding 9px 29px
+
+	@media(min-width desktop)
+		color white !important
+		position absolute
+		left 50%
+		top 50%
+		opacity 0
+		transition 0.2s
+		transform translate(-50%, -50%)
+		padding 9px 23px
+		z-index 1
+		transition 0.3s
+
+		&:hover
+			background #fff
+			color #000 !important
+
+@media(min-width tablet)
+	.cases5__imgWrapper
+		&::before
+			position absolute
+			left 50%
+			top 50%
+			content ''
+			width 100vw
+			height 100vh
+			transform translate(-50%, -50%)
+			background rgba(0,0,0,.7)
+			opacity 0
+			transition 0.25s
+
+	.cases5__item.is-selected:hover
+		.cases5__link,
+		.cases5__imgWrapper::before
+			opacity 1
+
+
+	.flickity-activated
+		.cases5__imgWrapper
+			transition width .3s, height .3s
+
+	.cases5__title, .cases5__desc, .cases5__link--mobile
+		opacity 0
+
+	.cases5__item:not(.is-selected)
+		.cases5__imgWrapper
+			width 213px
+			height 134px
+
+	.cases5__item.is-selected
+		.cases5__imgWrapper
+			width 443px
+			height 277px
+
+		.cases5__title, .cases5__desc, .cases5__link--mobile
+			opacity 1
+			transition opacity 0.3s 0.3s
+
+@media(min-width desktop)
+	.cases5__item:not(.is-selected)
+		.cases5__imgWrapper
+			width 387px
+			height 242px
+
+	.cases5__item.is-selected
+		.cases5__imgWrapper
+			width 793px
+			height 494px

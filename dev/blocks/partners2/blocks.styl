@@ -1,0 +1,37 @@
+.partners2__list
+	@media(min-width desktop)
+		display grid
+		grid-template-columns 1fr 1fr
+		grid-gap 48px
+
+.partners2__item
+	padding 16px 0 40px
+	border-top 1px solid mainText
+	@media(min-width desktop)
+		padding-bottom 0
+		display flex
+		justify-content space-between
+
+.partners2__logo, .partners2__video
+	display block
+	width 96px
+	min-height 26px
+	object-fit contain
+	object-position left bottom
+	@media(min-width desktop)
+		margin-top 2px
+		width 104px
+		min-height 28px
+
+.partners2__itemText
+	margin-top 12px
+	color mainText
+	@media(min-width desktop)
+		margin-top 0
+		max-width 264px
+
+.partners2.section--third
+	.partners2__item
+		border-top-color main3Text
+	.partners2__itemText
+		color main3Text

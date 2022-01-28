@@ -1,0 +1,119 @@
+.popupForm2
+	width 100vw
+	height calc(100vh - 64px)
+	padding 28px 24px
+	background main
+	color mainText
+	position fixed
+	left 0
+	bottom 0
+
+	@media(min-width desktop)
+		width 704px
+		height 100vh
+		padding 20px 24px 32px
+
+@media(max-width desktop - 1px)
+	.popupForm2
+		display grid
+		grid-template-columns 1fr 312px 1fr
+		grid-template-rows min-content min-content 1fr
+
+	.popupForm2__heading, .popupForm2__text, .popupForm2__form, .popupForm2__successText
+		grid-column 2/3
+
+@media(min-width desktop)
+	.popupForm2
+		display grid
+		grid-template-rows min-content min-content 1fr
+
+.popupForm2__form
+	align-self end
+
+.popupForm2__heading
+	margin 0
+
+.popupForm2__text
+	margin-top 10px
+	max-width 367px
+
+	@media(min-width desktop)
+		margin-top 16px
+
+.popupForm2__form
+	padding-top 56px
+	padding-left 56px
+
+	@media(min-width desktop)
+		padding-top 92px
+		padding-left 304px
+
+.popupForm2__formBlock
+	display block
+	width 100%
+
+	& + &
+		margin-top 8px
+
+		@media(min-width desktop)
+			margin-top 10px
+
+.popupForm2__input
+	display block
+	width 100%
+	padding 8px 0
+	color mainText
+	border none
+	background none
+	border-bottom 1px solid mainText
+
+	@media(min-width desktop)
+		padding 10px 0
+
+	&--error
+		border-color red
+
+	&::placeholder
+		color currentColor
+		opacity .5
+
+.popupForm2__submit
+	margin-top 24px
+	border 1px solid mainText
+	border-radius 60px
+	transition 0.3s
+	padding 9px 23px
+	cursor pointer
+
+	@media(min-width desktop)
+		margin-top 40px
+
+	&:hover
+		background mainText
+		color main
+
+// Успешная отправка.
+.popupForm2__successText
+	display none
+
+	p
+		margin 0
+
+.popupForm2--success
+	display flex
+	align-items center
+	justify-content center
+	padding 0
+
+	.popupForm2__heading, .popupForm2__text, .popupForm2__form
+		display none
+
+	.popupForm2__successText
+		display block
+		text-align center
+
+	.popupForm2__successTextIcon
+		margin-bottom 16px
+
+		@media(min-width desktop)
+			margin-bottom 24px

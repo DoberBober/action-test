@@ -1,0 +1,102 @@
+-
+	var title = 'Closed events for students'
+-
+	var desc = [
+		'Join the professional community, you can ask any question to specialists and make new useful contacts. Skillbox is an online university'
+	]
+-
+	var list = [
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		},
+		{
+			'name': 'Victoria Suvorova',
+			'post': 'Project manager in Pixels',
+			'desc': 'I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.',
+			'img': 'team-1.jpg'
+		}
+	]
+- var className = 'section team'
+if extraClass
+	- className = 'section team team--' + extraClass
+
+section(class=className)#team
+	.container.team__container
+		h2.team__heading.heading !{title}
+
+		if desc
+			.team__desc.text
+				each paragraph in desc
+					p= paragraph
+
+		.team__list
+			each item in list
+				.team__person
+					img(src="./images/" + item['img'], alt=item['name']).team__photo
+					.team__video.hidden
+					h3.team__name !{item['name']}
+					.team__post !{item['post']}
+					.team__desc !{item['desc']}

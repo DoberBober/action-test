@@ -1,0 +1,16 @@
+- var title = 'Доставка наших блюд'
+- var list = ['Delivery club', 'Яндекс еда', 'Доставка еды 1', 'Доставка еды 2']
+
+- var className = 'section section--brandColor app'
+if extraClass
+	- className = 'section section--brandColor app app--' + extraClass
+
+
+section(class=className)#app
+	.container.app__container
+		h2.app__heading.heading !{title}
+
+		.app__btns
+			each item in list
+				span.app__btn
+					a(href="#") !{item}

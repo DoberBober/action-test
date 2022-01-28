@@ -1,0 +1,122 @@
+.about3__container
+	display flex
+	flex-direction column
+	align-items start
+
+.about3__heading
+	order -2
+
+.about3__text
+	margin-bottom 24px
+
+	@media(min-width tablet)
+		margin-bottom 28px
+
+	@media(min-width desktop)
+		margin-bottom 40px
+
+.about3__btn
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 25px
+	display table
+	transition 0.3s
+
+	&:hover
+		background mainText
+		color main
+
+.about3__imgsList
+	order -1
+	margin-bottom 12px
+	width 100%
+
+	@media(min-width tablet)
+		margin-bottom 16px
+
+	@media(min-width desktop)
+		margin-bottom 20px
+
+.about3__img, .about3__video
+	display block
+	object-fit cover
+
+.about3__imgsList
+	display flex
+	flex-wrap wrap
+	margin-bottom 12px
+
+	@media(min-width tablet)
+		margin-bottom 16px
+
+	@media(min-width desktop)
+		margin-bottom 20px
+
+.about3__imgAdminWrapper
+	width calc((100% - 12px) / 2)
+	height 93px
+
+	@media(min-width tablet)
+		height 206px
+		width calc((100% - 16px) / 2)
+
+	@media(min-width desktop)
+		height 368px
+		width calc((100% - 20px) / 2)
+
+	&:nth-child(1)
+		width 100%
+		height 195px
+		margin-bottom 12px
+
+		@media(min-width tablet)
+			height 419px
+			margin-bottom 16px
+
+		@media(min-width desktop)
+			height 748px
+			margin-bottom 20px
+
+	&:nth-child(3)
+		margin-left 12px
+
+		@media(min-width tablet)
+			margin-left 16px
+
+		@media(min-width desktop)
+			margin-left 20px
+
+	.about3__img, .about3__video
+		display block
+		width 100%
+		height 100%
+		object-fit cover
+
+.about3__imgsList--2item
+	@media(min-width tablet)
+		display flex
+
+	.about3__imgAdminWrapper
+		width 100%
+		height 195px
+		margin-bottom 0
+
+		@media(min-width tablet)
+			height 206px
+			width calc((100% - 16px) / 2)
+
+		@media(min-width desktop)
+			height 368px
+			width calc((100% - 20px) / 2)
+
+	.about3__imgAdminWrapper + .about3__imgAdminWrapper
+		margin-top 12px
+
+		@media(min-width tablet)
+			margin-top 0
+			margin-left 16px
+
+		@media(min-width desktop)
+			margin-left 20px

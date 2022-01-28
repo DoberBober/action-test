@@ -1,0 +1,61 @@
+.faq3__list
+	margin 0
+	padding 0
+	list-style none
+	@media(min-width desktop)
+		display grid
+		grid-column-gap 48px
+		grid-template-columns 1fr 1fr
+
+.faq3__item
+	border-top 1px solid
+	padding 16px 0 20px
+	@media(max-width desktop - 1px)
+		&:first-of-type
+			border-top none
+			padding-top 0
+		&:last-child
+			padding-bottom 0
+	@media(min-width desktop)
+		padding 20px 0 48px
+
+		&:last-child, &:nth-last-child(2):nth-child(odd)
+			padding-bottom 0
+
+.faq3__question
+	margin 0 0 8px
+	@media(min-width desktop)
+		margin-bottom 12px
+
+.faq3__questionBtn
+	width 100%
+	text-align left
+	padding 0
+	border none
+	background none
+	display flex
+	justify-content space-between
+	align-items center
+
+.faq3__answer
+	max-width 472px
+
+	p
+		margin 0
+
+.faq3__link
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 25px
+	display table
+	transition 0.3s
+	margin-top 24px
+
+	@media(min-width desktop)
+		margin-top 40px
+
+	&:hover
+		background mainText
+		color main

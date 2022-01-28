@@ -1,0 +1,82 @@
+.team__container
+	max-width 408px
+
+	@media(min-width tablet)
+		max-width 736px
+
+	@media(min-width desktop)
+		max-width 1264px
+
+.team__person
+	width 300px
+	margin-left 12px
+
+	@media(min-width tablet)
+		width 443px
+		margin-left 15px
+
+	@media(min-width desktop)
+		width 793px
+		margin-left 20px
+
+.team__photo, .team__video
+	display block
+	object-fit cover
+	width 300px
+	height 187px
+	margin-bottom 12px
+
+	@media(min-width tablet)
+		width 443px
+		height 277px
+		margin-bottom 16px
+
+	@media(min-width desktop)
+		width 793px
+		height 496px
+		margin-bottom 20px
+
+.flickity-activated
+	.team__photo, .team__video
+		transition width .3s, height .3s
+
+.team__person:not(.is-selected)
+	.team__photo, .team__video
+		width 216px
+		height 136px
+
+		@media(min-width tablet)
+			width 214px
+			height 134px
+
+		@media(min-width desktop)
+			width 387px
+			height 282px
+
+.team__name
+	margin 0
+
+.team__post
+	opacity 0.75
+	margin-top 2px
+
+	@media(min-width desktop)
+		margin-top 4px
+
+.team__person .team__desc
+	margin-top 12px
+
+	@media(min-width tablet)
+		margin-top 16px
+
+	@media(min-width desktop)
+		margin-top 20px
+
+.team__person .team__desc
+	opacity 0
+	transition 0.3s
+	max-width 472px
+
+.team__person.is-selected
+	.team__desc
+		opacity 1

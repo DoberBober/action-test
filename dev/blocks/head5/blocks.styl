@@ -1,0 +1,68 @@
+.head5
+	background main
+	padding 76px 0 60px
+	overflow hidden
+	@media(min-width desktop)
+		padding 220px 0 110px
+
+.head5__container
+	@media(max-width desktop - 1px)
+		max-width 360px
+
+.head5__heading, .head5__heading span, .head5__text, .head5__text p, .head5__button
+	color mainText !important
+
+.head5__heading
+	margin 0 -5px 12px
+	@media(min-width desktop)
+		margin 0 -22px -10px
+
+.head5__text
+	max-width 472px
+
+.head5__text, .head5__buttons
+	@media(max-width desktop - 1px)
+		padding-left 58px
+	@media(min-width desktop)
+		width 100%
+		max-width 472px
+		margin-left auto
+		margin-right 85px
+
+.head5__buttons
+	margin-top 24px
+	margin-bottom 40px
+	@media(min-width desktop)
+		margin-top 40px
+		margin-bottom 80px
+
+.head5__button
+	display table
+	padding 9px 23px
+	text-decoration none
+	border 1px solid currentColor
+	background main
+	border-radius 60px
+	transition 0.3s
+
+	&:hover
+		border-color mainText
+		background mainText
+		color main !important
+
+.head5__img, .head5__video
+	display block
+	margin 72px auto 0
+	width 100vw
+	max-width 100vw
+	margin-left calc((100vw - 100%) / -2)
+	height 200px
+	object-fit cover
+	@media(min-width desktop)
+		margin-top 92px
+		height 810px
+
+@media(min-width desktop)
+	.head5__heading
+		&.heading--size-2, &.heading--size-3, &.heading--size-4, &.heading--size-5, &.heading--size-6, &.heading--size-7, &.heading--size-8, &.heading--size-9
+			margin-bottom 32px

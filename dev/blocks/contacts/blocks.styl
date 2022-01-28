@@ -1,0 +1,46 @@
+.contacts__item
+	& + &
+		margin-top 28px
+
+		@media(min-width desktop)
+			margin-top 0
+
+.contacts__itemName
+	display block
+	margin-bottom 8px
+
+	@media(min-width desktop)
+		margin-bottom 12px
+
+a.contacts__itemValue
+	text-decoration none
+	margin-right 10px
+	position relative
+
+	&:hover
+		text-decoration underline
+
+	&::after
+		content ', '
+		position absolute
+		left 100%
+		bottom 0
+
+	&:last-child
+		margin-right 0
+
+		&::after
+			display none
+
+@media(min-width desktop)
+	.contacts__body
+		display grid
+		grid-template-columns 1fr 1fr
+		grid-column-gap 48px
+		grid-row-gap 32px
+
+	.contacts__item
+		grid-column 2/3
+
+		&:first-child
+			grid-column 1/2

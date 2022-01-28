@@ -1,0 +1,114 @@
+.popupForm5
+	width 100vw
+	height calc(100vh - 64px)
+	padding 24px 24px 28px
+	background main
+	color mainText
+	position fixed
+	left 0
+	bottom 0
+
+	@media(min-width desktop)
+		width 696px
+		height 100vh
+		padding 24px 24px 32px
+
+.popupForm5
+	display grid
+	grid-template-rows min-content min-content 1fr
+
+.popupForm5__heading
+	margin 0 0 10px
+	max-width 368px
+
+	@media(min-width desktop)
+		margin-bottom 16px
+
+.popupForm5__form
+	align-self end
+	max-width 368px
+	padding-top 40px
+
+.popupForm5__text
+	max-width 368px
+
+.popupForm5__img
+	display block
+	object-fit cover
+	width 100%
+	height 194px
+	margin-bottom 20px
+
+	@media(min-width desktop)
+		margin-bottom 24px
+		height 404px
+
+.popupForm5__formBlock
+	display block
+	width 100%
+
+	& + &
+		margin-top 8px
+
+		@media(min-width desktop)
+			margin-top 10px
+
+.popupForm5__input
+	display block
+	width 100%
+	padding 8px 0
+	color mainText
+	border none
+	background none
+	border-bottom 1px solid mainText
+
+	@media(min-width desktop)
+		padding 10px 0
+
+	&--error
+		border-color red
+
+	&::placeholder
+		color currentColor
+		opacity .5
+
+.popupForm5__submit
+	margin-top 24px
+	border 1px solid mainText
+	border-radius 60px
+	transition 0.3s
+	padding 9px 23px
+	cursor pointer
+
+	@media(min-width desktop)
+		margin-top 40px
+
+	&:hover
+		background mainText
+		color main
+
+// Успешная отправка.
+.popupForm5__successText
+	display none
+
+	p
+		margin 0
+
+.popupForm5--success
+	display flex
+	align-items center
+	justify-content center
+	padding 0
+
+	.popupForm5__heading, .popupForm5__text, .popupForm5__form, .popupForm5__img
+		display none
+
+	.popupForm5__successText
+		display block
+		text-align center
+
+	.popupForm5__successTextIcon
+		margin-bottom 16px
+
+		@media(min-width desktop)
+			margin-bottom 24px

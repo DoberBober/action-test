@@ -1,0 +1,213 @@
+.head8
+	position relative
+	padding 0 0 60px
+	overflow hidden
+	background #000
+	@media(min-width desktop)
+		min-height 860px
+		// min-height var(--app-height, 100vh)
+		margin-bottom 110px
+		padding 124px 0 56px
+		display flex
+		flex-direction column
+	@media(min-width d2k)
+		min-height 980px
+
+	@media(max-width desktop - 1px)
+		&::before
+			content ''
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			background #fff
+
+.constructorActive
+	.head3
+		margin-bottom 0
+
+.head8__container
+	height 100%
+	width 100%
+	flex-grow 1
+	display flex
+	flex-direction column
+	@media(max-width desktop - 1px)
+		position relative
+		z-index 1
+
+.head8__text, .head8__text p, .head8__button, .head8__itemHeading, .head8__itemText
+	color mainText !important
+	@media(min-width desktop)
+		color #fff !important
+
+.head8__heading
+	margin 0
+	color white !important
+	max-width 312px
+	@media(max-width desktop - 1px)
+		padding-top 76px
+	@media(min-width desktop)
+		max-width 941px
+
+.head8__imgWrapper
+	order -1
+	width 100vw
+	margin-left -24px
+	// margin-left calc((100vw - 100%) / -2)
+	height 100%
+	min-height 240px
+	@media(min-width desktop)
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height 100%
+		margin-left 0
+
+		&::after
+			content ''
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			background rgba(0,0,0,.4)
+
+.head8__items
+	max-width 204px
+	margin 64px auto 0
+	@media(min-width desktop)
+		max-width 856px
+		margin-top 102px
+		display flex
+		flex-wrap wrap
+
+.head8__item
+	@media(min-width desktop)
+		width calc((100% - 160px) / 3)
+
+	& + &
+		margin-top 32px
+		@media(min-width desktop)
+			margin 0 0 0 80px
+
+.head8__itemHeading
+	margin 0
+	padding-bottom 4px
+	border-bottom 1px solid currentColor
+
+.head8__itemText
+	margin 4px 0 0
+	@media(min-width desktop)
+		margin-top 8px
+
+.head8__itemHeading:empty + .head8__itemText
+	margin-top 0
+
+.head8__img, .head8__video
+	display block
+	object-fit cover
+	width 100%
+	height 100%
+
+.head8__heading, .head8__text, .head8__items, .head8__text, .head8__buttons
+	position relative
+	z-index 1
+
+.head8__heading, .head8__text, .head8__buttons
+	@media(max-width desktop - 1px)
+		max-width 320px
+		width 100%
+		margin-left auto
+		margin-right auto
+
+.head8__text, .head8__buttons
+	max-width 258px
+	@media(max-width desktop - 1px)
+		padding-right 62px
+	@media(min-width desktop)
+		max-width 472px
+
+.head8__text
+	padding-top 20px
+	@media(min-width desktop)
+		padding-top 0
+		margin-top -10px
+
+.head8__buttons
+	margin-top 24px
+	@media(min-width desktop)
+		margin-top 40px
+
+.head8__button
+	display table
+	padding 9px 23px
+	border 1px solid currentColor
+	border-radius 60px
+	text-decoration none
+	transition 0.3s
+	margin 0
+
+	&:hover
+		background mainText
+		border-color mainText
+		color main !important
+		@media(min-width desktop)
+			background #fff
+			border-color #fff
+			color #000 !important
+
+@media(max-width desktop - 1px)
+	.head8__container
+		display grid
+		grid-template-columns 1fr
+		grid-template-rows min-content min-content min-content min-content
+
+	.head8__imgWrapper, .head8__heading, .head8__text, .head8__buttons, .head8__items
+		grid-column 1/2
+
+	.head8__heading
+		align-self end
+
+	.head8__imgWrapper, .head8__heading
+		grid-row 1/2
+
+	.head8__text
+		grid-row 2/3
+
+	.head8__buttons
+		grid-row 3/4
+
+	.head8__items
+		grid-row 4/5
+
+
+
+@media(min-width desktop)
+	.head8__container
+		display grid
+		grid-template-columns 334px 1fr
+		grid-template-rows min-content min-content min-content 1fr min-content
+
+	.head8__heading
+		grid-column 1/3
+		grid-row 1/2
+
+	.head8__text
+		grid-column 2/3
+		grid-row 2/3
+
+	.head8__buttons
+		grid-column 2/3
+		grid-row 3/4
+
+	.head8__items
+		grid-column 2/3
+		grid-row 4/5
+		align-self end
+
+	.head8__heading
+		&.heading--size-2, &.heading--size-3, &.heading--size-4, &.heading--size-5, &.heading--size-6, &.heading--size-7, &.heading--size-8, &.heading--size-9
+			margin-bottom 20px

@@ -1,0 +1,79 @@
+.footer4__blockHeading
+	display none
+
+.footer4
+	padding-top 60px
+	padding-bottom 60px
+	background #fff
+	color #000
+
+	@media(min-width desktop)
+		padding-top 110px
+		padding-bottom 110px
+
+.footer4__siteName, .footer4__phone, .footer4__email, .footer4__address, .footer4__social
+	color #000
+	text-decoration none
+
+	&:hover
+		text-decoration underline
+
+.footer4__siteNameWrapper
+	margin-bottom 16px
+
+.footer4__phone, .footer4__email
+	display table
+	margin-bottom 8px
+
+.footer4__socials
+	margin-top 32px
+	margin-bottom -12px
+	display flex
+	flex-wrap wrap
+
+.footer4__social
+	margin-right 12px
+	margin-bottom 12px
+
+@media(min-width desktop)
+	.footer4__container
+		display grid
+		align-items end
+		grid-template-columns 368px 1fr
+		grid-template-rows min-content min-content min-content min-content
+
+	.footer4__siteNameWrapper
+		margin-bottom 28px
+		grid-column 1/2
+		grid-row 1/2
+
+	.footer4__phone
+		margin-bottom 10px
+		grid-column 1/2
+		grid-row 2/3
+		justify-self start
+
+	.footer4__email
+		margin-bottom 10px
+		grid-column 1/2
+		grid-row 3/4
+		justify-self start
+
+	.footer4__address
+		margin-bottom 0
+		grid-column 1/2
+		grid-row 4/5
+		justify-self start
+
+	.footer4__socials
+		padding-left 102px
+		margin-top 0
+		grid-column 2/3
+		grid-row 1/5
+		justify-content flex-end
+
+	.footer4__social
+		margin-right 0
+
+		& + &
+			margin-left 16px

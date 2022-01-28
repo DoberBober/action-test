@@ -1,0 +1,107 @@
+.about__btnWrapper
+	display table
+
+.about__btn
+	display table
+	border 1px solid mainText
+	background transparent
+	color mainText
+	text-decoration none
+	border-radius 60px
+	padding 9px 25px
+	transition 0.3s
+
+	&:hover
+		background mainText
+		color main
+
+.about__text
+	margin-bottom 24px
+
+	@media(min-width tablet)
+		margin-bottom 28px
+
+	@media(min-width desktop)
+		margin-bottom 40px
+
+.about__img, .about__video
+	display block
+	object-fit cover
+
+@media(max-width upToTablet)
+	.about__container
+		width 360px
+		display flex
+		flex-direction column
+
+	.about__heading
+		order -3
+
+	.about__imgAdminWrapper
+		order -2
+		margin-bottom 12px
+
+	.about__imgAdminWrapper + .about__imgAdminWrapper
+		order -1
+
+	.about__img, .about__video
+		height 195px
+		width 100%
+
+@media(min-width tablet)
+	.about__container
+		display grid
+
+	.about__text
+		order 1
+
+	.about__btnWrapper
+		order 2
+
+	.about__imgAdminWrapper, .about__img, .about__video
+		width 100%
+		height 100%
+
+@media(min-width tablet) and (max-width upToDesktop)
+	.about__container
+		grid-template-columns 328px 99px 229px
+
+	.about__heading
+		grid-column 1/4
+
+	.about__text
+		margin-top 16px
+		grid-column 1/3
+
+	.about__imgAdminWrapper
+		grid-column 1/2
+
+	.about__imgAdminWrapper + .about__imgAdminWrapper
+		margin-left 16px
+		grid-column 2/4
+
+	.about__btnWrapper
+		grid-column 1/2
+
+
+@media(min-width desktop)
+	.about__container
+		grid-template-columns 1fr 1fr
+		grid-template-rows min-content minmax(200px, max-content) min-content
+		grid-column-gap 20px
+
+	.about__heading
+		grid-column 1/3
+
+	.about__text
+		margin-top 20px
+		grid-column 1/2
+
+	.about__imgAdminWrapper
+		grid-column 1/2
+
+	.about__imgAdminWrapper + .about__imgAdminWrapper
+		grid-column 2/3
+
+	.about__btnWrapper
+		grid-column 1/2

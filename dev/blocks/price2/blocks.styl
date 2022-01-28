@@ -1,0 +1,103 @@
+.price2__desc
+	max-width 576px
+
+.price2__item
+	padding-top 12px
+	border-top 1px solid currentColor
+
+	@media(min-width desktop)
+		padding-top 16px
+
+	& + &
+		margin-top 56px
+
+		@media(min-width desktop)
+			margin-top 48px
+
+.price2__itemHeading
+	margin 0
+
+.price2__itemDesc
+	margin-top 20px
+
+	@media(min-width desktop)
+		margin-top 12px
+
+.price2__itemPrice
+	margin-top 12px
+
+	@media(min-width desktop)
+		margin-top 0
+
+.price2__btn
+	display table
+	margin-top 40px
+	border 1px solid currentColor
+	border-radius 60px
+	text-decoration none
+	padding 9px 22px
+	transition 0.3s
+	color mainText
+
+	@media(min-width desktop)
+		padding 9px 23px
+
+	&:hover
+		background mainText
+		color main
+
+
+@media(max-width desktop - 1px)
+	.price2__item
+		display flex
+		flex-direction column
+
+	.price2__itemHeading
+		order -2
+
+	.price2__itemPrice
+		order -1
+
+@media(min-width desktop)
+	.price2__container
+		display grid
+		grid-template-columns 1fr 1fr
+		grid-column-gap 45px
+
+	.price2__heading
+		grid-column 1/3
+
+	.price2__desc
+		grid-column 1/2
+
+	.price2__list
+		grid-column 2/3
+
+	.price2__btn
+		grid-column 2/3
+		justify-self start
+
+	.price2__item
+		display grid
+		grid-template-columns 396px 156px
+		justify-content space-between
+
+		&:first-child
+			border-top none
+			padding-top 0
+
+	.price2__itemHeading
+		grid-column 1/2
+		grid-row 1/2
+
+	.price2__itemPrice
+		grid-column 2/3
+		grid-row 1/2
+
+	.price2__itemDesc
+		grid-column 1/2
+		grid-row 2/3
+
+	.price2__itemHeading:empty + .price2__itemDesc
+		grid-row 1/2
+		margin-top 0

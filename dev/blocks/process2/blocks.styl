@@ -1,0 +1,81 @@
+.process2__container
+	display flex
+	flex-direction column
+
+.process2__heading
+	order -3
+
+.process2__desc
+	order -2
+	margin-bottom 24px
+	@media(min-width desktop)
+		margin-bottom 40px
+
+.process2__list
+	margin 0
+	padding 0
+	list-style none
+	counter-reset process2List
+
+.process2__item
+	border-top 1px solid mainText
+	padding 16px 0 40px 55px
+	counter-increment process2List
+	position relative
+
+	@media(min-width tablet)
+		padding 16px 0 40px 228px
+
+	@media(min-width desktop)
+		padding 16px 0 48px 416px
+
+	&::before
+		content counter(process2List)
+		position absolute
+		left 0
+		top 13px
+		@media(min-width desktop)
+			top 10px
+
+	&:last-child
+		padding-bottom 0
+
+.process2__step
+	margin 0 0 6px
+	max-width 576px
+	@media(min-width desktop)
+		margin-bottom 12px
+
+.process2__stepBtn
+	border none
+	text-align left
+	background none
+	padding 0
+
+.process2__stepDesc
+	max-width 368px
+
+	p
+		margin 0
+
+		& + &
+			margin-top 1em
+
+.process2__link
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 25px
+	display table
+	transition 0.3s
+	order -1
+	align-self start
+	margin-bottom 40px
+
+	@media(min-width desktop)
+		margin-bottom 100px
+
+	&:hover
+		background mainText
+		color main

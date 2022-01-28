@@ -1,0 +1,97 @@
+.services4__list
+	position relative
+	padding-top 192px
+	@media(min-width desktop)
+		padding-top 699px
+		display flex
+
+.services4__item
+	transition 0.3s
+	cursor pointer
+
+	&:nth-child(n+4)
+		display none
+
+	@media(max-width desktop - 1px)
+		opacity 0.3
+
+		& + &
+			margin-top 12px
+
+		&--active
+			opacity 1
+			margin-bottom 28px
+
+	@media(min-width desktop)
+		width 27.75%
+		opacity 0.5
+
+		&--active
+			width 38.5%
+			opacity 1
+			margin-right 2%
+
+		& + &
+			margin-left 2%
+
+	&--active
+		cursor default
+
+		&::after
+			margin-top 16px
+			content ''
+			display block
+			width 100%
+			height 1px
+			background linear-gradient(90deg, #C4C4C4 0%, #C4C4C4 50%, currentColor 50%, currentColor 100%)
+			background-size 200% 100%
+			animation services4ProgressAnimation 5s linear
+
+@keyframes services4ProgressAnimation
+	from
+		background-position 0% center
+	to
+		background-position -100% center
+
+.services4__itemImgWrapper
+	background-image url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.0039 15C16.0039 15.7956 15.6878 16.5587 15.1252 17.1213C14.5626 17.6839 13.7996 18 13.0039 18C12.2083 18 11.4452 17.6839 10.8826 17.1213C10.32 16.5587 10.0039 15.7956 10.0039 15C10.0039 14.2044 10.32 13.4413 10.8826 12.8787C11.4452 12.3161 12.2083 12 13.0039 12C13.7996 12 14.5626 12.3161 15.1252 12.8787C15.6878 13.4413 16.0039 14.2044 16.0039 15V15Z' fill='black'/%3E%3Cpath d='M7 8C6.20435 8 5.44129 8.31607 4.87868 8.87868C4.31607 9.44129 4 10.2044 4 11V29C4 29.7957 4.31607 30.5587 4.87868 31.1213C5.44129 31.6839 6.20435 32 7 32H33C33.7957 32 34.5587 31.6839 35.1213 31.1213C35.6839 30.5587 36 29.7957 36 29V11C36 10.2044 35.6839 9.44129 35.1213 8.87868C34.5587 8.31607 33.7957 8 33 8H7ZM33 10C33.2652 10 33.5196 10.1054 33.7071 10.2929C33.8947 10.4804 34 10.7348 34 11V23L26.45 19.106C26.2625 19.012 26.0501 18.9795 25.843 19.0128C25.6359 19.0462 25.4445 19.1439 25.296 19.292L17.876 26.712L12.556 23.168C12.3639 23.0401 12.1335 22.9826 11.9039 23.0052C11.6742 23.0278 11.4595 23.1291 11.296 23.292L6.004 28V29.08C6.00161 29.0534 6.00028 29.0267 6 29V11C6 10.7348 6.10536 10.4804 6.29289 10.2929C6.48043 10.1054 6.73478 10 7 10H33Z' fill='black'/%3E%3C/svg%3E%0A")
+	background-repeat no-repeat
+	background-position center
+	background-color #F4F4F4
+	position absolute
+	left 0
+	top 0
+	width 100%
+	height 176px
+	transition 1s
+	@media(min-width desktop)
+		height 675px
+
+.services4__itemImg
+	display block
+	object-fit cover
+	width 100%
+	height 100%
+
+.services4__itemName
+	margin 0
+
+.services4__itemDesc
+	margin-top 6px
+	@media(min-width desktop)
+		margin-top 8px
+		max-width 308px
+
+@media(min-width desktop)
+	.services4__item--active
+		.services4__itemDesc
+			margin-top 12px
+
+@media(max-width desktop - 1px)
+	.services4__item:not(.services4__item--active)
+		.services4__itemDesc
+			display none
+
+.services4__item:not(.services4__item--active)
+	.services4__itemImgWrapper
+		opacity 0

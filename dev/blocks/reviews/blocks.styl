@@ -1,0 +1,49 @@
+.reviews__item
+	position relative
+	padding-top 388px
+	width 312px
+	margin-left 13px
+
+	@media(min-width tablet)
+		padding-top 0
+		padding-left 343px
+		min-height 476px
+		width 582px
+		margin-left 54px
+
+	@media(min-width desktop)
+		padding-left 416px
+		min-height 562px
+		width 728px
+		margin-left 81px
+
+.reviews__info
+	display flex
+	flex-direction column-reverse
+
+.reviews__text
+	margin-bottom 24px
+
+	@media(min-width desktop)
+		margin-bottom 28px
+
+.reviews__photo, .reviews__video
+	position absolute
+	left 0
+	top 0
+	display block
+	object-fit cover
+	width 312px
+	height 376px
+
+	@media(min-width tablet)
+		width 327px
+		height 476px
+
+	@media(min-width desktop)
+		width 387px
+		height 562px
+
+.reviews__post
+	margin-top 4px
+	opacity 0.75

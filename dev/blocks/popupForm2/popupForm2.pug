@@ -1,0 +1,20 @@
+//- Чтобы отобразить сообщение после отправки, надо накинут ьмодификатор .popupForm2--success.
+.isPopup.popupForm2
+	h2.popupForm2__heading Закажите дизайн сайта со скидкой 30%
+	.popupForm2__text Предложите выгодную акцию для пользователя, или сообщите ему, что это тот самый момент, чтобы начать с вами работу.
+	
+	form.popupForm2__form(action="#") 
+		.popupForm2__formBlock 
+			input(type="text" placeholder="Email" id="popupForm2-1" name="popupForm2-1").popupForm2__input
+			label(for="popupForm2-1").visually-hidden Введите ваш email 
+		.popupForm2__formBlock 
+			input(type="text" placeholder="Address" id="popupForm2-2" name="popupForm2-2").popupForm2__input
+			label(for="popupForm2-2").visually-hidden Введите ваш адрес
+
+		button(type="submit").popupForm2__submit Сделать заказ
+
+		input(type="hidden" name="domainName")
+
+	.popupForm2__successText
+		.popupForm2__successTextIcon
+		p Ваша заявка отправлена

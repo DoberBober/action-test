@@ -1,0 +1,22 @@
+// Чтобы отобразить сообщение после отправки, надо накинут ьмодификатор .popupForm--success.
+.isPopup.popupForm
+	h2.popupForm__heading Get Best Advertiser In  Your Side Pocket
+	.popupForm__text
+		p Join the professional community, you can ask any question to specialists and make new useful contacts. 
+	
+	form.popupForm__form(action="#") 
+		.popupForm__formBlock 
+			input(type="text" placeholder="Email" id="popupForm-1" name="popupForm-1").popupForm__input
+			label(for="popupForm-1").visually-hidden Введите ваш email 
+		.popupForm__formBlock 
+			input(type="text" placeholder="Address" id="popupForm-2" name="popupForm-2").popupForm__input
+			label(for="popupForm-2").visually-hidden Введите ваш адрес
+
+		button(type="submit").popupForm__submit Let’s go
+
+		.popupForm__note I agree with the terms of the user agreement
+		input(type="hidden" name="domainName")
+
+	.popupForm__successText
+		.popupForm__successTextIcon
+		p Our website builder makes it easy to customize your site and add the tools you need to grow your business.

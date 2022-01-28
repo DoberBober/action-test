@@ -1,0 +1,133 @@
+.cases2__item
+	width 312px
+	margin-right 12px
+	@media(min-width tablet)
+		width 672px
+		margin-right 16px
+	@media(min-width desktop)
+		width 100%
+		margin-right 0
+		display flex
+
+.cases2__body
+	@media(min-width desktop)
+		margin-top 20px
+		flex-grow 1
+		max-height 367px
+		overflow-y auto
+		-ms-overflow-style none
+		scrollbar-width 1px
+		scrollbar-color #000000 #D3D3D3
+
+		&::-webkit-scrollbar
+			width 1px
+			background #d3d3d3
+
+		&::-webkit-scrollbar-thumb
+			background #000
+
+.cases2__imgWrapper
+	margin-bottom 16px
+	width 100%
+	height 194px
+	@media(min-width tablet)
+		height 419px
+	@media(min-width desktop)
+		flex-shrink 0
+		width 590px
+		height 372px
+		margin-bottom 0
+		margin-right 34px
+
+.cases2__img
+	display block
+	width 100%
+	height 100%
+	object-fit cover
+
+.cases2__title
+	margin 0 0 8px
+	max-width 480px
+	padding-right 8px
+	@media(min-width tablet)
+		max-width 443px
+	@media(min-width desktop)
+		margin-bottom 12px
+		max-width 472px
+
+.cases2__desc
+	max-width 480px
+	padding-right 8px
+	@media(min-width tablet)
+		max-width 443px
+	@media(min-width desktop)
+		max-width 472px
+
+.cases2__points
+	margin 20px 0 0
+	padding 0
+	max-width 480px
+	padding-right 8px
+	list-style none
+	@media(min-width tablet)
+		max-width 443px
+	@media(min-width desktop)
+		max-width 472px
+		margin-top 24px
+
+.cases2__pointsItem
+	position relative
+	padding-left 11px
+	@media(min-width desktop)
+		padding-left 13px
+
+	& + &
+		margin-top 12px
+
+	&::before
+		content ''
+		width 3px
+		height 3px
+		background currentColor
+		border-radius 100%
+		position absolute
+		left 0
+		top 6px
+		@media(min-width desktop)
+			width 5px
+			height 5px
+
+.cases2__link
+	margin-top 24px
+	display table
+	border-radius 60px
+	text-decoration none
+	border 1px solid currentColor
+	padding 9px 29px
+
+	@media(min-width desktop)
+		margin-top 40px
+		padding-left 23px
+		padding-right 23px
+		transition 0.3s
+
+		&:hover
+			background mainText
+			border-color mainText
+			color main
+
+@media(max-width upToTablet)
+	.cases2
+		.flickity-buttons-wrapper
+			margin-top 32px
+
+@media(min-width desktop)
+	.cases2__item
+		&::before
+			content ''
+			width calc(100% - 590px - 34px)
+			height 1px
+			background #000
+			position absolute
+			right 0
+			top 0

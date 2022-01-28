@@ -1,0 +1,78 @@
+.footer3
+	padding-top 60px
+	padding-bottom 60px
+	background #fff
+	color #000
+
+	@media(min-width desktop)
+		padding-top 110px
+		padding-bottom 56px
+
+.footer3__menuItem, .footer3__phone, .footer3__address, .footer3__siteName
+	color #000
+	text-decoration none
+
+	&:hover
+		text-decoration underline
+
+.footer3__menu
+	display flex
+	flex-wrap wrap
+	margin-bottom -12px
+
+	@media(min-width desktop)
+		margin-bottom -12px
+
+.footer3__menuItem
+	margin-right 20px
+	margin-bottom 12px
+
+	@media(min-width desktop)
+		margin-right 32px
+		margin-bottom 20px
+
+.footer3__phone, .footer3__phone.hidden + .footer3__address
+	display table
+	margin-top 24px
+
+	@media(min-width desktop)
+		margin-top 28px
+
+.footer3__phone
+	@media(min-width desktop)
+		margin-right 12px
+
+.footer3__address
+	display table
+	margin-top 10px
+
+	@media(min-width desktop)
+		margin-top 28px
+
+.footer3__siteNameWrapper
+	margin-top 24px
+
+	@media(min-width desktop)
+		margin-top 12px
+
+
+@media(min-width desktop)
+	.footer3__container
+		display grid
+		grid-template-columns max-content max-content 1fr
+
+	.footer3__menu
+		grid-column 1/4
+		grid-row 1/2
+
+	.footer3__phone
+		grid-column 1/2
+		grid-row 2/3
+
+	.footer3__address
+		grid-column 2/3
+		grid-row 2/3
+
+	.footer3__siteNameWrapper
+		grid-column 1/4
+		grid-row 3/4

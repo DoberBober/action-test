@@ -1,0 +1,56 @@
+.advantages4__list
+	@media(min-width tablet)
+		margin-bottom -40px
+		display flex
+		flex-wrap wrap
+
+	@media(min-width desktop)
+		margin-bottom -60px
+
+.advantages4__item
+	margin-bottom 32px
+
+	@media(min-width tablet)
+		margin-bottom 40px
+		width calc((100% - 32px) / 3)
+		margin-left 16px
+
+		&:nth-child(3n+1)
+			margin-left 0
+
+	@media(min-width desktop)
+		margin-bottom 60px
+		width calc((100% - 96px) / 3)
+		margin-left 48px
+
+.advantages4__name
+	margin 0 0 8px
+
+	@media(min-width tablet)
+		margin-bottom 12px
+
+	@media(min-width desktop)
+		margin-bottom 24px
+
+.advantages4__text
+	margin 0
+
+.advantages4__link
+	text-decoration none
+	border 1px solid mainText
+	color mainText
+	border-radius 60px
+	padding 9px 25px
+	display table
+	transition 0.3s
+	margin-top 24px
+
+	@media(min-width tablet)
+		margin-top 48px
+
+	@media(min-width desktop)
+		margin-top 60px
+
+	&:hover
+		background mainText
+		color main

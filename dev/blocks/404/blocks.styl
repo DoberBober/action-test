@@ -1,0 +1,49 @@
+.e404
+	height var(--app-height, 100vh)
+	background main2
+	color main2Text
+	text-align center
+	display flex
+	flex-direction column
+	justify-content center
+	align-items center
+
+.e404__heading, .e404__text
+		color main2Text
+
+.e404__heading
+	margin 0
+
+.e404__text
+	margin-top 32px
+	margin-bottom 0
+
+	@media(min-width tablet)
+		margin-top 36px
+
+	@media(min-width desktop)
+		margin-top 40px
+
+.e404__link
+	display table
+	margin 32px auto 0
+	text-decoration none
+	text-align center
+	border 1px solid main2BtnText
+	background main2Btn
+	color main2BtnText
+	padding 9px 24px
+	border-radius 60px
+	transition 0.3s
+
+	&:hover
+		border-color main2BtnText
+		background main2BtnText
+		color main2Btn
+
+	@media(min-width tablet)
+		margin-top 36px
+
+	@media(min-width desktop)
+		margin-top 40px
+		padding 7px 24px

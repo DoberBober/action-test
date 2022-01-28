@@ -1,0 +1,23 @@
+-
+	 var title = 'Closed events for students'
+-
+	 var hint = 'Today'
+-
+	 var desc = [
+				'Join the professional community, you can ask any question to specialists and make new useful contacts. Skillbox is an online university'
+			]
+- var className = 'section section--brandColor cta'
+if extraClass
+	- className = 'section section--brandColor cta cta--' + extraClass
+
+
+section(class=className)#cta
+	.container.cta__container
+		h2.cta__heading.heading !{title}
+
+		if desc
+			.cta__desc.text
+				each paragraph in desc
+					p= paragraph
+
+		a(href="").cta__callToAction Let’s go

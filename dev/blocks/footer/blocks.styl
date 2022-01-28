@@ -1,0 +1,64 @@
+.footer__menu, .footer__contacts--phone, .footer__btns, .footer__privacy, .footer__copyright, .footer__backToTop, .footer__desc
+	display none
+
+.footer
+	background main2
+	color main2Text
+	overflow hidden
+
+.footer__container
+	position relative
+	display flex
+	align-items center
+	justify-content space-between
+	padding-top 12px
+	padding-bottom 12px
+
+	@media(min-width tablet)
+		padding-top 7px
+		padding-bottom 7px
+
+	@media(min-width desktop)
+		padding-top 19px
+		padding-bottom 19px
+
+	&::after
+		content ''
+		background main2Text
+		position absolute
+		left calc((100vw - 100%) / -2)
+		bottom 0
+		width 100vw
+		height 1px
+
+.footer__techSocialList
+	margin 0
+	padding 0
+	list-style none
+	display flex
+
+.footer__techSocialLink
+	svg
+		fill main2Text
+
+.footer__techSocialItem
+	& + &
+		margin-left 16px
+
+		@media(min-width desktop)
+			margin-left 24px
+
+.footer__techInfo
+	width 100%
+	display flex
+	align-items: center
+	justify-content: space-between
+	padding-top 16px
+	padding-bottom 60px
+
+	@media(min-width tablet)
+		padding-bottom 64px
+
+	@media(min-width desktop)
+		padding-top 20px
+		padding-bottom 120px

@@ -1,0 +1,21 @@
+section.section.cases2#cases2
+	.container.cases2__container
+		h2.cases2__heading.heading Моё портфолио
+		.cases2__text.text Вставьте скриншот хорошего качества с вашей работой и опишите его двумя-тремя предложениями
+
+		.cases2__list
+			- var i = 0
+			while i < 4
+				- i = i + 1
+				.cases2__item
+					.cases2__imgWrapper
+						img(src="./images/advantages__mainImg.jpg", alt="").cases2__img
+
+					.cases2__body
+						h3.cases2__title Продвижение тендерной площадки Bicotender.ru
+						.cases2__desc BiCotender – самая полная система тендеров с «умным» поиском, разработанная в 2005 году. В систему загружено более 50 миллионов тендеров, количество пользователей системы - 420000 человек. ГК BiCo стала первой тендерной компанией, получившей патент в области аналитики закупок и создала собственную систему сертификации BiCo Standart.
+						ul.cases2__points
+							li.cases2__pointsItem 71% запросов в топе Яндекс
+							li.cases2__pointsItem 71% запросов в топе Яндекс
+							li.cases2__pointsItem 71% запросов в топе Яндекс
+						a(href="#").cases2__link Узнать больше
