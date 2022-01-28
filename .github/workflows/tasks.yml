@@ -11,7 +11,7 @@ jobs:
           node-version: '16.13.2'
       - run: set -eu
       - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.Beget }}" > "$HOME/.ssh/key"
+      - run: echo "${{ secrets.beget }}" > "$HOME/.ssh/key"
       - run: chmod 600 "$HOME/.ssh/key"
       - run: npm i
       - run: npm run build
